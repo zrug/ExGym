@@ -21,6 +21,98 @@
 		6878DB6219B163A2009FBECB /* ExGymTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6878DB6119B163A2009FBECB /* ExGymTests.m */; };
 		6878DB6E19B164F7009FBECB /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6878DB6D19B164F7009FBECB /* LoginViewController.m */; };
 		6878DB7119B16C59009FBECB /* loginImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6878DB7019B16C59009FBECB /* loginImage.jpg */; };
+		689DAC4619C1F00800955A94 /* ScheduleCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DAC4519C1F00800955A94 /* ScheduleCalendarViewController.m */; };
+		689DAC4C19C471A800955A94 /* MyPanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DAC4B19C471A800955A94 /* MyPanelViewController.m */; };
+		689DACF519C47E7100955A94 /* DataFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DAC4F19C47E7100955A94 /* DataFile.m */; };
+		689DACF619C47E7100955A94 /* Coords.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DAC5019C47E7100955A94 /* Coords.m */; };
+		689DACF719C47E7100955A94 /* NavWalkoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DAC5119C47E7100955A94 /* NavWalkoutViewController.m */; };
+		689DACF819C47E7100955A94 /* WalkingTraceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DAC5219C47E7100955A94 /* WalkingTraceViewController.m */; };
+		689DACF919C47E7100955A94 /* Coord.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DAC5419C47E7100955A94 /* Coord.m */; };
+		689DACFA19C47E7100955A94 /* WalkingTraceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 689DAC5819C47E7100955A94 /* WalkingTraceViewController.xib */; };
+		689DACFC19C47E7100955A94 /* BaseMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DAC5E19C47E7100955A94 /* BaseMapViewController.m */; };
+		689DACFD19C47E7100955A94 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DAC6019C47E7100955A94 /* MainViewController.m */; };
+		689DACFE19C47E7100955A94 /* AddGestureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DAC6419C47E7100955A94 /* AddGestureViewController.m */; };
+		689DACFF19C47E7100955A94 /* AnimatedAnnotationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DAC6619C47E7100955A94 /* AnimatedAnnotationViewController.m */; };
+		689DAD0019C47E7100955A94 /* AnnotationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DAC6819C47E7100955A94 /* AnnotationViewController.m */; };
+		689DAD0119C47E7100955A94 /* CustomAnnotationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DAC6A19C47E7100955A94 /* CustomAnnotationViewController.m */; };
+		689DAD0219C47E7100955A94 /* CustomOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DAC6C19C47E7100955A94 /* CustomOverlayViewController.m */; };
+		689DAD0319C47E7100955A94 /* GeodesicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DAC6E19C47E7100955A94 /* GeodesicViewController.m */; };
+		689DAD0419C47E7100955A94 /* GestureAttributesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DAC7019C47E7100955A94 /* GestureAttributesViewController.m */; };
+		689DAD0519C47E7100955A94 /* MapTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DAC7219C47E7100955A94 /* MapTypeViewController.m */; };
+		689DAD0619C47E7100955A94 /* OverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DAC7419C47E7100955A94 /* OverlayViewController.m */; };
+		689DAD0719C47E7100955A94 /* ScreenshotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DAC7619C47E7100955A94 /* ScreenshotViewController.m */; };
+		689DAD0819C47E7100955A94 /* TrafficViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DAC7819C47E7100955A94 /* TrafficViewController.m */; };
+		689DAD0919C47E7100955A94 /* UserLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DAC7A19C47E7100955A94 /* UserLocationViewController.m */; };
+		689DAD0A19C47E7100955A94 /* ScreenshotDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DAC7D19C47E7100955A94 /* ScreenshotDetailViewController.m */; };
+		689DAD0B19C47E7100955A94 /* BusLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DAC8119C47E7100955A94 /* BusLineViewController.m */; };
+		689DAD0C19C47E7100955A94 /* BusStopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DAC8319C47E7100955A94 /* BusStopViewController.m */; };
+		689DAD0D19C47E7100955A94 /* GeoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DAC8519C47E7100955A94 /* GeoViewController.m */; };
+		689DAD0E19C47E7100955A94 /* InvertGeoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DAC8719C47E7100955A94 /* InvertGeoViewController.m */; };
+		689DAD0F19C47E7100955A94 /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DAC8919C47E7100955A94 /* NavigationViewController.m */; };
+		689DAD1019C47E7100955A94 /* PoiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DAC8B19C47E7100955A94 /* PoiViewController.m */; };
+		689DAD1119C47E7100955A94 /* AddressComponentDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DAC8E19C47E7100955A94 /* AddressComponentDetailViewController.m */; };
+		689DAD1219C47E7100955A94 /* BizExtenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DAC9019C47E7100955A94 /* BizExtenViewController.m */; };
+		689DAD1319C47E7100955A94 /* BusLineDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DAC9219C47E7100955A94 /* BusLineDetailViewController.m */; };
+		689DAD1419C47E7100955A94 /* BusStopDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DAC9419C47E7100955A94 /* BusStopDetailViewController.m */; };
+		689DAD1519C47E7100955A94 /* CinemaDeepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DAC9619C47E7100955A94 /* CinemaDeepViewController.m */; };
+		689DAD1619C47E7100955A94 /* DeepContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DAC9819C47E7100955A94 /* DeepContentViewController.m */; };
+		689DAD1719C47E7100955A94 /* DiningDeepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DAC9A19C47E7100955A94 /* DiningDeepViewController.m */; };
+		689DAD1819C47E7100955A94 /* GeoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DAC9C19C47E7100955A94 /* GeoDetailViewController.m */; };
+		689DAD1919C47E7100955A94 /* GroupBuyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DAC9E19C47E7100955A94 /* GroupBuyDetailViewController.m */; };
+		689DAD1A19C47E7100955A94 /* HotelDeepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DACA019C47E7100955A94 /* HotelDeepViewController.m */; };
+		689DAD1B19C47E7100955A94 /* InvertGeoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DACA219C47E7100955A94 /* InvertGeoDetailViewController.m */; };
+		689DAD1C19C47E7100955A94 /* MovieInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DACA419C47E7100955A94 /* MovieInfoViewController.m */; };
+		689DAD1D19C47E7100955A94 /* PathDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DACA619C47E7100955A94 /* PathDetailViewController.m */; };
+		689DAD1E19C47E7100955A94 /* PoiDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DACA819C47E7100955A94 /* PoiDetailViewController.m */; };
+		689DAD1F19C47E7100955A94 /* RichContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DACAA19C47E7100955A94 /* RichContentViewController.m */; };
+		689DAD2019C47E7100955A94 /* RoadDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DACAC19C47E7100955A94 /* RoadDetailViewController.m */; };
+		689DAD2119C47E7100955A94 /* RoadInterDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DACAE19C47E7100955A94 /* RoadInterDetailViewController.m */; };
+		689DAD2219C47E7100955A94 /* RoomInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DACB019C47E7100955A94 /* RoomInfoViewController.m */; };
+		689DAD2319C47E7100955A94 /* RouteDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DACB219C47E7100955A94 /* RouteDetailViewController.m */; };
+		689DAD2419C47E7100955A94 /* ScenicDeepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DACB419C47E7100955A94 /* ScenicDeepViewController.m */; };
+		689DAD2519C47E7100955A94 /* SegmentDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DACB619C47E7100955A94 /* SegmentDetailViewController.m */; };
+		689DAD2619C47E7100955A94 /* StepDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DACB819C47E7100955A94 /* StepDetailViewController.m */; };
+		689DAD2719C47E7100955A94 /* StreetNumberDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DACBA19C47E7100955A94 /* StreetNumberDetailViewController.m */; };
+		689DAD2819C47E7100955A94 /* TicketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DACBC19C47E7100955A94 /* TicketViewController.m */; };
+		689DAD2919C47E7100955A94 /* TransitDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DACBE19C47E7100955A94 /* TransitDetailViewController.m */; };
+		689DAD2A19C47E7100955A94 /* WalkingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DACC019C47E7100955A94 /* WalkingDetailViewController.m */; };
+		689DAD2B19C47E7100955A94 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 689DACC219C47E7100955A94 /* InfoPlist.strings */; };
+		689DAD2E19C47E7100955A94 /* animatedCar_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 689DACCA19C47E7100955A94 /* animatedCar_1.png */; };
+		689DAD2F19C47E7100955A94 /* animatedCar_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 689DACCB19C47E7100955A94 /* animatedCar_2.png */; };
+		689DAD3019C47E7100955A94 /* animatedCar_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 689DACCC19C47E7100955A94 /* animatedCar_3.png */; };
+		689DAD3119C47E7100955A94 /* animatedCar_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 689DACCD19C47E7100955A94 /* animatedCar_4.png */; };
+		689DAD3219C47E7100955A94 /* animatedTrain_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 689DACCF19C47E7100955A94 /* animatedTrain_1.png */; };
+		689DAD3319C47E7100955A94 /* animatedTrain_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 689DACD019C47E7100955A94 /* animatedTrain_2.png */; };
+		689DAD3419C47E7100955A94 /* animatedTrain_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 689DACD119C47E7100955A94 /* animatedTrain_3.png */; };
+		689DAD3519C47E7100955A94 /* animatedTrain_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 689DACD219C47E7100955A94 /* animatedTrain_4.png */; };
+		689DAD3619C47E7100955A94 /* endPoint.png in Resources */ = {isa = PBXBuildFile; fileRef = 689DACD319C47E7100955A94 /* endPoint.png */; };
+		689DAD3719C47E7100955A94 /* endPoint@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 689DACD419C47E7100955A94 /* endPoint@2x.png */; };
+		689DAD3819C47E7100955A94 /* hema.png in Resources */ = {isa = PBXBuildFile; fileRef = 689DACD519C47E7100955A94 /* hema.png */; };
+		689DAD3919C47E7100955A94 /* startPoint.png in Resources */ = {isa = PBXBuildFile; fileRef = 689DACD619C47E7100955A94 /* startPoint.png */; };
+		689DAD3A19C47E7100955A94 /* startPoint@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 689DACD719C47E7100955A94 /* startPoint@2x.png */; };
+		689DAD3B19C47E7100955A94 /* AnimatedAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DACDA19C47E7100955A94 /* AnimatedAnnotation.m */; };
+		689DAD3C19C47E7100955A94 /* AnimatedAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DACDC19C47E7100955A94 /* AnimatedAnnotationView.m */; };
+		689DAD3D19C47E7100955A94 /* BusStopAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DACDE19C47E7100955A94 /* BusStopAnnotation.m */; };
+		689DAD3E19C47E7100955A94 /* CustomAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DACE019C47E7100955A94 /* CustomAnnotationView.m */; };
+		689DAD3F19C47E7100955A94 /* CustomCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DACE219C47E7100955A94 /* CustomCalloutView.m */; };
+		689DAD4019C47E7100955A94 /* FaceOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DACE419C47E7100955A94 /* FaceOverlay.m */; };
+		689DAD4119C47E7100955A94 /* FaceOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DACE619C47E7100955A94 /* FaceOverlayView.m */; };
+		689DAD4219C47E7100955A94 /* GeocodeAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DACE819C47E7100955A94 /* GeocodeAnnotation.m */; };
+		689DAD4319C47E7100955A94 /* LineDashPolyline.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DACEA19C47E7100955A94 /* LineDashPolyline.m */; };
+		689DAD4419C47E7100955A94 /* POIAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DACEC19C47E7100955A94 /* POIAnnotation.m */; };
+		689DAD4519C47E7100955A94 /* ReGeocodeAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DACEE19C47E7100955A94 /* ReGeocodeAnnotation.m */; };
+		689DAD4619C47E7100955A94 /* NavWalkoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 689DACF019C47E7100955A94 /* NavWalkoutViewController.xib */; };
+		689DAD4719C47E7100955A94 /* CommonUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DACF319C47E7100955A94 /* CommonUtility.m */; };
+		689DAD4919C4803C00955A94 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 689DAD4819C4803C00955A94 /* QuartzCore.framework */; };
+		689DAD4B19C4804400955A94 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 689DAD4A19C4804400955A94 /* libz.dylib */; };
+		689DAD4D19C4804D00955A94 /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 689DAD4C19C4804D00955A94 /* libstdc++.6.0.9.dylib */; };
+		689DAD4F19C4805700955A94 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 689DAD4E19C4805700955A94 /* SystemConfiguration.framework */; };
+		689DAD5119C4805F00955A94 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 689DAD5019C4805F00955A94 /* CoreTelephony.framework */; };
+		689DAD5419C4825300955A94 /* AMapSearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 689DAD5219C4825300955A94 /* AMapSearchKit.framework */; };
+		689DAD5519C4825300955A94 /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 689DAD5319C4825300955A94 /* MAMapKit.framework */; };
+		689DAD5719C482F000955A94 /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 689DAD5619C482F000955A94 /* AMap.bundle */; };
+		689DAD5919C4830F00955A94 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 689DAD5819C4830F00955A94 /* Security.framework */; };
+		689DAD5B19C4832200955A94 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 689DAD5A19C4832200955A94 /* CoreLocation.framework */; };
 		68C1C17F19BF4D240076BC63 /* UserInfoGatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C1C17E19BF4D240076BC63 /* UserInfoGatherViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +146,165 @@
 		6878DB6C19B164F7009FBECB /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = login/LoginViewController.h; sourceTree = "<group>"; };
 		6878DB6D19B164F7009FBECB /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = login/LoginViewController.m; sourceTree = "<group>"; };
 		6878DB7019B16C59009FBECB /* loginImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = loginImage.jpg; path = images/loginImage.jpg; sourceTree = "<group>"; };
+		689DAC4419C1F00800955A94 /* ScheduleCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScheduleCalendarViewController.h; path = Schedule/ScheduleCalendarViewController.h; sourceTree = "<group>"; };
+		689DAC4519C1F00800955A94 /* ScheduleCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScheduleCalendarViewController.m; path = Schedule/ScheduleCalendarViewController.m; sourceTree = "<group>"; };
+		689DAC4A19C471A800955A94 /* MyPanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyPanelViewController.h; path = User/MyPanelViewController.h; sourceTree = "<group>"; };
+		689DAC4B19C471A800955A94 /* MyPanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyPanelViewController.m; path = User/MyPanelViewController.m; sourceTree = "<group>"; };
+		689DAC4F19C47E7100955A94 /* DataFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataFile.m; path = WalkingTrace/DataFile.m; sourceTree = "<group>"; };
+		689DAC5019C47E7100955A94 /* Coords.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Coords.m; path = WalkingTrace/Coords.m; sourceTree = "<group>"; };
+		689DAC5119C47E7100955A94 /* NavWalkoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NavWalkoutViewController.m; path = WalkingTrace/NavWalkoutViewController.m; sourceTree = "<group>"; };
+		689DAC5219C47E7100955A94 /* WalkingTraceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WalkingTraceViewController.m; path = WalkingTrace/WalkingTraceViewController.m; sourceTree = "<group>"; };
+		689DAC5319C47E7100955A94 /* Coords.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Coords.h; path = WalkingTrace/Coords.h; sourceTree = "<group>"; };
+		689DAC5419C47E7100955A94 /* Coord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Coord.m; path = WalkingTrace/Coord.m; sourceTree = "<group>"; };
+		689DAC5519C47E7100955A94 /* Coord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Coord.h; path = WalkingTrace/Coord.h; sourceTree = "<group>"; };
+		689DAC5619C47E7100955A94 /* DataFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataFile.h; path = WalkingTrace/DataFile.h; sourceTree = "<group>"; };
+		689DAC5719C47E7100955A94 /* WalkingTraceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WalkingTraceViewController.h; path = WalkingTrace/WalkingTraceViewController.h; sourceTree = "<group>"; };
+		689DAC5819C47E7100955A94 /* WalkingTraceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WalkingTraceViewController.xib; path = WalkingTrace/WalkingTraceViewController.xib; sourceTree = "<group>"; };
+		689DAC5B19C47E7100955A94 /* APIKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIKey.h; sourceTree = "<group>"; };
+		689DAC5D19C47E7100955A94 /* BaseMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseMapViewController.h; sourceTree = "<group>"; };
+		689DAC5E19C47E7100955A94 /* BaseMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseMapViewController.m; sourceTree = "<group>"; };
+		689DAC5F19C47E7100955A94 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		689DAC6019C47E7100955A94 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		689DAC6319C47E7100955A94 /* AddGestureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddGestureViewController.h; sourceTree = "<group>"; };
+		689DAC6419C47E7100955A94 /* AddGestureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddGestureViewController.m; sourceTree = "<group>"; };
+		689DAC6519C47E7100955A94 /* AnimatedAnnotationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedAnnotationViewController.h; sourceTree = "<group>"; };
+		689DAC6619C47E7100955A94 /* AnimatedAnnotationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedAnnotationViewController.m; sourceTree = "<group>"; };
+		689DAC6719C47E7100955A94 /* AnnotationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnotationViewController.h; sourceTree = "<group>"; };
+		689DAC6819C47E7100955A94 /* AnnotationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnnotationViewController.m; sourceTree = "<group>"; };
+		689DAC6919C47E7100955A94 /* CustomAnnotationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnnotationViewController.h; sourceTree = "<group>"; };
+		689DAC6A19C47E7100955A94 /* CustomAnnotationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotationViewController.m; sourceTree = "<group>"; };
+		689DAC6B19C47E7100955A94 /* CustomOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomOverlayViewController.h; sourceTree = "<group>"; };
+		689DAC6C19C47E7100955A94 /* CustomOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomOverlayViewController.m; sourceTree = "<group>"; };
+		689DAC6D19C47E7100955A94 /* GeodesicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeodesicViewController.h; sourceTree = "<group>"; };
+		689DAC6E19C47E7100955A94 /* GeodesicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeodesicViewController.m; sourceTree = "<group>"; };
+		689DAC6F19C47E7100955A94 /* GestureAttributesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureAttributesViewController.h; sourceTree = "<group>"; };
+		689DAC7019C47E7100955A94 /* GestureAttributesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureAttributesViewController.m; sourceTree = "<group>"; };
+		689DAC7119C47E7100955A94 /* MapTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapTypeViewController.h; sourceTree = "<group>"; };
+		689DAC7219C47E7100955A94 /* MapTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapTypeViewController.m; sourceTree = "<group>"; };
+		689DAC7319C47E7100955A94 /* OverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayViewController.h; sourceTree = "<group>"; };
+		689DAC7419C47E7100955A94 /* OverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayViewController.m; sourceTree = "<group>"; };
+		689DAC7519C47E7100955A94 /* ScreenshotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreenshotViewController.h; sourceTree = "<group>"; };
+		689DAC7619C47E7100955A94 /* ScreenshotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScreenshotViewController.m; sourceTree = "<group>"; };
+		689DAC7719C47E7100955A94 /* TrafficViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrafficViewController.h; sourceTree = "<group>"; };
+		689DAC7819C47E7100955A94 /* TrafficViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrafficViewController.m; sourceTree = "<group>"; };
+		689DAC7919C47E7100955A94 /* UserLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLocationViewController.h; sourceTree = "<group>"; };
+		689DAC7A19C47E7100955A94 /* UserLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLocationViewController.m; sourceTree = "<group>"; };
+		689DAC7C19C47E7100955A94 /* ScreenshotDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreenshotDetailViewController.h; sourceTree = "<group>"; };
+		689DAC7D19C47E7100955A94 /* ScreenshotDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScreenshotDetailViewController.m; sourceTree = "<group>"; };
+		689DAC8019C47E7100955A94 /* BusLineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusLineViewController.h; sourceTree = "<group>"; };
+		689DAC8119C47E7100955A94 /* BusLineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusLineViewController.m; sourceTree = "<group>"; };
+		689DAC8219C47E7100955A94 /* BusStopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusStopViewController.h; sourceTree = "<group>"; };
+		689DAC8319C47E7100955A94 /* BusStopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusStopViewController.m; sourceTree = "<group>"; };
+		689DAC8419C47E7100955A94 /* GeoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoViewController.h; sourceTree = "<group>"; };
+		689DAC8519C47E7100955A94 /* GeoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoViewController.m; sourceTree = "<group>"; };
+		689DAC8619C47E7100955A94 /* InvertGeoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvertGeoViewController.h; sourceTree = "<group>"; };
+		689DAC8719C47E7100955A94 /* InvertGeoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvertGeoViewController.m; sourceTree = "<group>"; };
+		689DAC8819C47E7100955A94 /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
+		689DAC8919C47E7100955A94 /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
+		689DAC8A19C47E7100955A94 /* PoiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoiViewController.h; sourceTree = "<group>"; };
+		689DAC8B19C47E7100955A94 /* PoiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoiViewController.m; sourceTree = "<group>"; };
+		689DAC8D19C47E7100955A94 /* AddressComponentDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressComponentDetailViewController.h; sourceTree = "<group>"; };
+		689DAC8E19C47E7100955A94 /* AddressComponentDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressComponentDetailViewController.m; sourceTree = "<group>"; };
+		689DAC8F19C47E7100955A94 /* BizExtenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BizExtenViewController.h; sourceTree = "<group>"; };
+		689DAC9019C47E7100955A94 /* BizExtenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BizExtenViewController.m; sourceTree = "<group>"; };
+		689DAC9119C47E7100955A94 /* BusLineDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusLineDetailViewController.h; sourceTree = "<group>"; };
+		689DAC9219C47E7100955A94 /* BusLineDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusLineDetailViewController.m; sourceTree = "<group>"; };
+		689DAC9319C47E7100955A94 /* BusStopDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusStopDetailViewController.h; sourceTree = "<group>"; };
+		689DAC9419C47E7100955A94 /* BusStopDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusStopDetailViewController.m; sourceTree = "<group>"; };
+		689DAC9519C47E7100955A94 /* CinemaDeepViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinemaDeepViewController.h; sourceTree = "<group>"; };
+		689DAC9619C47E7100955A94 /* CinemaDeepViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CinemaDeepViewController.m; sourceTree = "<group>"; };
+		689DAC9719C47E7100955A94 /* DeepContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeepContentViewController.h; sourceTree = "<group>"; };
+		689DAC9819C47E7100955A94 /* DeepContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeepContentViewController.m; sourceTree = "<group>"; };
+		689DAC9919C47E7100955A94 /* DiningDeepViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiningDeepViewController.h; sourceTree = "<group>"; };
+		689DAC9A19C47E7100955A94 /* DiningDeepViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiningDeepViewController.m; sourceTree = "<group>"; };
+		689DAC9B19C47E7100955A94 /* GeoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoDetailViewController.h; sourceTree = "<group>"; };
+		689DAC9C19C47E7100955A94 /* GeoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoDetailViewController.m; sourceTree = "<group>"; };
+		689DAC9D19C47E7100955A94 /* GroupBuyDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupBuyDetailViewController.h; sourceTree = "<group>"; };
+		689DAC9E19C47E7100955A94 /* GroupBuyDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupBuyDetailViewController.m; sourceTree = "<group>"; };
+		689DAC9F19C47E7100955A94 /* HotelDeepViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotelDeepViewController.h; sourceTree = "<group>"; };
+		689DACA019C47E7100955A94 /* HotelDeepViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelDeepViewController.m; sourceTree = "<group>"; };
+		689DACA119C47E7100955A94 /* InvertGeoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvertGeoDetailViewController.h; sourceTree = "<group>"; };
+		689DACA219C47E7100955A94 /* InvertGeoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvertGeoDetailViewController.m; sourceTree = "<group>"; };
+		689DACA319C47E7100955A94 /* MovieInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieInfoViewController.h; sourceTree = "<group>"; };
+		689DACA419C47E7100955A94 /* MovieInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieInfoViewController.m; sourceTree = "<group>"; };
+		689DACA519C47E7100955A94 /* PathDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathDetailViewController.h; sourceTree = "<group>"; };
+		689DACA619C47E7100955A94 /* PathDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathDetailViewController.m; sourceTree = "<group>"; };
+		689DACA719C47E7100955A94 /* PoiDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoiDetailViewController.h; sourceTree = "<group>"; };
+		689DACA819C47E7100955A94 /* PoiDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoiDetailViewController.m; sourceTree = "<group>"; };
+		689DACA919C47E7100955A94 /* RichContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RichContentViewController.h; sourceTree = "<group>"; };
+		689DACAA19C47E7100955A94 /* RichContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RichContentViewController.m; sourceTree = "<group>"; };
+		689DACAB19C47E7100955A94 /* RoadDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoadDetailViewController.h; sourceTree = "<group>"; };
+		689DACAC19C47E7100955A94 /* RoadDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoadDetailViewController.m; sourceTree = "<group>"; };
+		689DACAD19C47E7100955A94 /* RoadInterDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoadInterDetailViewController.h; sourceTree = "<group>"; };
+		689DACAE19C47E7100955A94 /* RoadInterDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoadInterDetailViewController.m; sourceTree = "<group>"; };
+		689DACAF19C47E7100955A94 /* RoomInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomInfoViewController.h; sourceTree = "<group>"; };
+		689DACB019C47E7100955A94 /* RoomInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomInfoViewController.m; sourceTree = "<group>"; };
+		689DACB119C47E7100955A94 /* RouteDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteDetailViewController.h; sourceTree = "<group>"; };
+		689DACB219C47E7100955A94 /* RouteDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteDetailViewController.m; sourceTree = "<group>"; };
+		689DACB319C47E7100955A94 /* ScenicDeepViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScenicDeepViewController.h; sourceTree = "<group>"; };
+		689DACB419C47E7100955A94 /* ScenicDeepViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScenicDeepViewController.m; sourceTree = "<group>"; };
+		689DACB519C47E7100955A94 /* SegmentDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentDetailViewController.h; sourceTree = "<group>"; };
+		689DACB619C47E7100955A94 /* SegmentDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentDetailViewController.m; sourceTree = "<group>"; };
+		689DACB719C47E7100955A94 /* StepDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepDetailViewController.h; sourceTree = "<group>"; };
+		689DACB819C47E7100955A94 /* StepDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepDetailViewController.m; sourceTree = "<group>"; };
+		689DACB919C47E7100955A94 /* StreetNumberDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreetNumberDetailViewController.h; sourceTree = "<group>"; };
+		689DACBA19C47E7100955A94 /* StreetNumberDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreetNumberDetailViewController.m; sourceTree = "<group>"; };
+		689DACBB19C47E7100955A94 /* TicketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketViewController.h; sourceTree = "<group>"; };
+		689DACBC19C47E7100955A94 /* TicketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketViewController.m; sourceTree = "<group>"; };
+		689DACBD19C47E7100955A94 /* TransitDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitDetailViewController.h; sourceTree = "<group>"; };
+		689DACBE19C47E7100955A94 /* TransitDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitDetailViewController.m; sourceTree = "<group>"; };
+		689DACBF19C47E7100955A94 /* WalkingDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalkingDetailViewController.h; sourceTree = "<group>"; };
+		689DACC019C47E7100955A94 /* WalkingDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalkingDetailViewController.m; sourceTree = "<group>"; };
+		689DACC319C47E7100955A94 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		689DACCA19C47E7100955A94 /* animatedCar_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = animatedCar_1.png; sourceTree = "<group>"; };
+		689DACCB19C47E7100955A94 /* animatedCar_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = animatedCar_2.png; sourceTree = "<group>"; };
+		689DACCC19C47E7100955A94 /* animatedCar_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = animatedCar_3.png; sourceTree = "<group>"; };
+		689DACCD19C47E7100955A94 /* animatedCar_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = animatedCar_4.png; sourceTree = "<group>"; };
+		689DACCF19C47E7100955A94 /* animatedTrain_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = animatedTrain_1.png; sourceTree = "<group>"; };
+		689DACD019C47E7100955A94 /* animatedTrain_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = animatedTrain_2.png; sourceTree = "<group>"; };
+		689DACD119C47E7100955A94 /* animatedTrain_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = animatedTrain_3.png; sourceTree = "<group>"; };
+		689DACD219C47E7100955A94 /* animatedTrain_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = animatedTrain_4.png; sourceTree = "<group>"; };
+		689DACD319C47E7100955A94 /* endPoint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = endPoint.png; sourceTree = "<group>"; };
+		689DACD419C47E7100955A94 /* endPoint@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "endPoint@2x.png"; sourceTree = "<group>"; };
+		689DACD519C47E7100955A94 /* hema.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hema.png; sourceTree = "<group>"; };
+		689DACD619C47E7100955A94 /* startPoint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startPoint.png; sourceTree = "<group>"; };
+		689DACD719C47E7100955A94 /* startPoint@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "startPoint@2x.png"; sourceTree = "<group>"; };
+		689DACD919C47E7100955A94 /* AnimatedAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedAnnotation.h; sourceTree = "<group>"; };
+		689DACDA19C47E7100955A94 /* AnimatedAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedAnnotation.m; sourceTree = "<group>"; };
+		689DACDB19C47E7100955A94 /* AnimatedAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedAnnotationView.h; sourceTree = "<group>"; };
+		689DACDC19C47E7100955A94 /* AnimatedAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedAnnotationView.m; sourceTree = "<group>"; };
+		689DACDD19C47E7100955A94 /* BusStopAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusStopAnnotation.h; sourceTree = "<group>"; };
+		689DACDE19C47E7100955A94 /* BusStopAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusStopAnnotation.m; sourceTree = "<group>"; };
+		689DACDF19C47E7100955A94 /* CustomAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnnotationView.h; sourceTree = "<group>"; };
+		689DACE019C47E7100955A94 /* CustomAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotationView.m; sourceTree = "<group>"; };
+		689DACE119C47E7100955A94 /* CustomCalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCalloutView.h; sourceTree = "<group>"; };
+		689DACE219C47E7100955A94 /* CustomCalloutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCalloutView.m; sourceTree = "<group>"; };
+		689DACE319C47E7100955A94 /* FaceOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceOverlay.h; sourceTree = "<group>"; };
+		689DACE419C47E7100955A94 /* FaceOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceOverlay.m; sourceTree = "<group>"; };
+		689DACE519C47E7100955A94 /* FaceOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceOverlayView.h; sourceTree = "<group>"; };
+		689DACE619C47E7100955A94 /* FaceOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceOverlayView.m; sourceTree = "<group>"; };
+		689DACE719C47E7100955A94 /* GeocodeAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeocodeAnnotation.h; sourceTree = "<group>"; };
+		689DACE819C47E7100955A94 /* GeocodeAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeocodeAnnotation.m; sourceTree = "<group>"; };
+		689DACE919C47E7100955A94 /* LineDashPolyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineDashPolyline.h; sourceTree = "<group>"; };
+		689DACEA19C47E7100955A94 /* LineDashPolyline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineDashPolyline.m; sourceTree = "<group>"; };
+		689DACEB19C47E7100955A94 /* POIAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POIAnnotation.h; sourceTree = "<group>"; };
+		689DACEC19C47E7100955A94 /* POIAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POIAnnotation.m; sourceTree = "<group>"; };
+		689DACED19C47E7100955A94 /* ReGeocodeAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReGeocodeAnnotation.h; sourceTree = "<group>"; };
+		689DACEE19C47E7100955A94 /* ReGeocodeAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReGeocodeAnnotation.m; sourceTree = "<group>"; };
+		689DACEF19C47E7100955A94 /* NavWalkoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NavWalkoutViewController.h; path = WalkingTrace/NavWalkoutViewController.h; sourceTree = "<group>"; };
+		689DACF019C47E7100955A94 /* NavWalkoutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NavWalkoutViewController.xib; path = WalkingTrace/NavWalkoutViewController.xib; sourceTree = "<group>"; };
+		689DACF219C47E7100955A94 /* CommonUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUtility.h; sourceTree = "<group>"; };
+		689DACF319C47E7100955A94 /* CommonUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUtility.m; sourceTree = "<group>"; };
+		689DAD4819C4803C00955A94 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		689DAD4A19C4804400955A94 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		689DAD4C19C4804D00955A94 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
+		689DAD4E19C4805700955A94 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		689DAD5019C4805F00955A94 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		689DAD5219C4825300955A94 /* AMapSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AMapSearchKit.framework; path = ExGym/Extern/AMapSearchKit.framework; sourceTree = "<group>"; };
+		689DAD5319C4825300955A94 /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MAMapKit.framework; path = ExGym/Extern/MAMapKit.framework; sourceTree = "<group>"; };
+		689DAD5619C482F000955A94 /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AMap.bundle; path = ExGym/Extern/MAMapKit.framework/Versions/2.1.3/Resources/AMap.bundle; sourceTree = "<group>"; };
+		689DAD5819C4830F00955A94 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		689DAD5A19C4832200955A94 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		68C1C17D19BF4D240076BC63 /* UserInfoGatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserInfoGatherViewController.h; path = User/UserInfoGatherViewController.h; sourceTree = "<group>"; };
 		68C1C17E19BF4D240076BC63 /* UserInfoGatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserInfoGatherViewController.m; path = User/UserInfoGatherViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,6 +314,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				689DAD5B19C4832200955A94 /* CoreLocation.framework in Frameworks */,
+				689DAD5919C4830F00955A94 /* Security.framework in Frameworks */,
+				689DAD5119C4805F00955A94 /* CoreTelephony.framework in Frameworks */,
+				689DAD4F19C4805700955A94 /* SystemConfiguration.framework in Frameworks */,
+				689DAD4D19C4804D00955A94 /* libstdc++.6.0.9.dylib in Frameworks */,
+				689DAD4B19C4804400955A94 /* libz.dylib in Frameworks */,
+				689DAD5519C4825300955A94 /* MAMapKit.framework in Frameworks */,
+				689DAD4919C4803C00955A94 /* QuartzCore.framework in Frameworks */,
+				689DAD5419C4825300955A94 /* AMapSearchKit.framework in Frameworks */,
 				6878DB3919B163A2009FBECB /* CoreGraphics.framework in Frameworks */,
 				6878DB3B19B163A2009FBECB /* UIKit.framework in Frameworks */,
 				6878DB3719B163A2009FBECB /* Foundation.framework in Frameworks */,
@@ -85,6 +345,7 @@
 		6878DB2A19B163A2009FBECB = {
 			isa = PBXGroup;
 			children = (
+				689DAD5619C482F000955A94 /* AMap.bundle */,
 				6878DB3C19B163A2009FBECB /* ExGym */,
 				6878DB5B19B163A2009FBECB /* ExGymTests */,
 				6878DB3519B163A2009FBECB /* Frameworks */,
@@ -104,6 +365,15 @@
 		6878DB3519B163A2009FBECB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				689DAD5A19C4832200955A94 /* CoreLocation.framework */,
+				689DAD5819C4830F00955A94 /* Security.framework */,
+				689DAD5219C4825300955A94 /* AMapSearchKit.framework */,
+				689DAD5319C4825300955A94 /* MAMapKit.framework */,
+				689DAD5019C4805F00955A94 /* CoreTelephony.framework */,
+				689DAD4E19C4805700955A94 /* SystemConfiguration.framework */,
+				689DAD4C19C4804D00955A94 /* libstdc++.6.0.9.dylib */,
+				689DAD4A19C4804400955A94 /* libz.dylib */,
+				689DAD4819C4803C00955A94 /* QuartzCore.framework */,
 				6878DB3619B163A2009FBECB /* Foundation.framework */,
 				6878DB3819B163A2009FBECB /* CoreGraphics.framework */,
 				6878DB3A19B163A2009FBECB /* UIKit.framework */,
@@ -115,11 +385,13 @@
 		6878DB3C19B163A2009FBECB /* ExGym */ = {
 			isa = PBXGroup;
 			children = (
+				689DAC4D19C47DEC00955A94 /* walkingTrace */,
 				6878DB6F19B16C48009FBECB /* images */,
 				6878DB4519B163A2009FBECB /* AppDelegate.h */,
 				6878DB4619B163A2009FBECB /* AppDelegate.m */,
 				6878DB6B19B164A6009FBECB /* Login */,
 				68C1C17C19BF4CF60076BC63 /* User */,
+				689DAC4319C1EFBD00955A94 /* Schedule */,
 				6878DB4E19B163A2009FBECB /* Images.xcassets */,
 				6878DB3D19B163A2009FBECB /* Supporting Files */,
 			);
@@ -172,9 +444,298 @@
 			name = images;
 			sourceTree = "<group>";
 		};
+		689DAC4319C1EFBD00955A94 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				689DAC4419C1F00800955A94 /* ScheduleCalendarViewController.h */,
+				689DAC4519C1F00800955A94 /* ScheduleCalendarViewController.m */,
+			);
+			name = Schedule;
+			sourceTree = "<group>";
+		};
+		689DAC4D19C47DEC00955A94 /* walkingTrace */ = {
+			isa = PBXGroup;
+			children = (
+				689DACEF19C47E7100955A94 /* NavWalkoutViewController.h */,
+				689DAC5119C47E7100955A94 /* NavWalkoutViewController.m */,
+				689DACF019C47E7100955A94 /* NavWalkoutViewController.xib */,
+				689DAC5719C47E7100955A94 /* WalkingTraceViewController.h */,
+				689DAC5219C47E7100955A94 /* WalkingTraceViewController.m */,
+				689DAC5819C47E7100955A94 /* WalkingTraceViewController.xib */,
+				689DAC5319C47E7100955A94 /* Coords.h */,
+				689DAC5019C47E7100955A94 /* Coords.m */,
+				689DAC5419C47E7100955A94 /* Coord.m */,
+				689DAC5519C47E7100955A94 /* Coord.h */,
+				689DAC5619C47E7100955A94 /* DataFile.h */,
+				689DAC4F19C47E7100955A94 /* DataFile.m */,
+				689DAC5A19C47E7100955A94 /* Configuration */,
+				689DAC5C19C47E7100955A94 /* Controllers */,
+				689DACC119C47E7100955A94 /* en.lproj */,
+				689DACC719C47E7100955A94 /* Images */,
+				689DACD819C47E7100955A94 /* Models */,
+				689DACF119C47E7100955A94 /* Utility */,
+			);
+			name = walkingTrace;
+			sourceTree = "<group>";
+		};
+		689DAC5A19C47E7100955A94 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				689DAC5B19C47E7100955A94 /* APIKey.h */,
+			);
+			name = Configuration;
+			path = WalkingTrace/Configuration;
+			sourceTree = "<group>";
+		};
+		689DAC5C19C47E7100955A94 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				689DAC5D19C47E7100955A94 /* BaseMapViewController.h */,
+				689DAC5E19C47E7100955A94 /* BaseMapViewController.m */,
+				689DAC5F19C47E7100955A94 /* MainViewController.h */,
+				689DAC6019C47E7100955A94 /* MainViewController.m */,
+				689DAC6119C47E7100955A94 /* MapControllers */,
+				689DAC7E19C47E7100955A94 /* SearchControllers */,
+			);
+			name = Controllers;
+			path = WalkingTrace/Controllers;
+			sourceTree = "<group>";
+		};
+		689DAC6119C47E7100955A94 /* MapControllers */ = {
+			isa = PBXGroup;
+			children = (
+				689DAC6219C47E7100955A94 /* MapBaseControllers */,
+				689DAC7B19C47E7100955A94 /* MapDetailControllers */,
+			);
+			path = MapControllers;
+			sourceTree = "<group>";
+		};
+		689DAC6219C47E7100955A94 /* MapBaseControllers */ = {
+			isa = PBXGroup;
+			children = (
+				689DAC6319C47E7100955A94 /* AddGestureViewController.h */,
+				689DAC6419C47E7100955A94 /* AddGestureViewController.m */,
+				689DAC6519C47E7100955A94 /* AnimatedAnnotationViewController.h */,
+				689DAC6619C47E7100955A94 /* AnimatedAnnotationViewController.m */,
+				689DAC6719C47E7100955A94 /* AnnotationViewController.h */,
+				689DAC6819C47E7100955A94 /* AnnotationViewController.m */,
+				689DAC6919C47E7100955A94 /* CustomAnnotationViewController.h */,
+				689DAC6A19C47E7100955A94 /* CustomAnnotationViewController.m */,
+				689DAC6B19C47E7100955A94 /* CustomOverlayViewController.h */,
+				689DAC6C19C47E7100955A94 /* CustomOverlayViewController.m */,
+				689DAC6D19C47E7100955A94 /* GeodesicViewController.h */,
+				689DAC6E19C47E7100955A94 /* GeodesicViewController.m */,
+				689DAC6F19C47E7100955A94 /* GestureAttributesViewController.h */,
+				689DAC7019C47E7100955A94 /* GestureAttributesViewController.m */,
+				689DAC7119C47E7100955A94 /* MapTypeViewController.h */,
+				689DAC7219C47E7100955A94 /* MapTypeViewController.m */,
+				689DAC7319C47E7100955A94 /* OverlayViewController.h */,
+				689DAC7419C47E7100955A94 /* OverlayViewController.m */,
+				689DAC7519C47E7100955A94 /* ScreenshotViewController.h */,
+				689DAC7619C47E7100955A94 /* ScreenshotViewController.m */,
+				689DAC7719C47E7100955A94 /* TrafficViewController.h */,
+				689DAC7819C47E7100955A94 /* TrafficViewController.m */,
+				689DAC7919C47E7100955A94 /* UserLocationViewController.h */,
+				689DAC7A19C47E7100955A94 /* UserLocationViewController.m */,
+			);
+			path = MapBaseControllers;
+			sourceTree = "<group>";
+		};
+		689DAC7B19C47E7100955A94 /* MapDetailControllers */ = {
+			isa = PBXGroup;
+			children = (
+				689DAC7C19C47E7100955A94 /* ScreenshotDetailViewController.h */,
+				689DAC7D19C47E7100955A94 /* ScreenshotDetailViewController.m */,
+			);
+			path = MapDetailControllers;
+			sourceTree = "<group>";
+		};
+		689DAC7E19C47E7100955A94 /* SearchControllers */ = {
+			isa = PBXGroup;
+			children = (
+				689DAC7F19C47E7100955A94 /* SearchBaseControllers */,
+				689DAC8C19C47E7100955A94 /* SearchDetailControllers */,
+			);
+			path = SearchControllers;
+			sourceTree = "<group>";
+		};
+		689DAC7F19C47E7100955A94 /* SearchBaseControllers */ = {
+			isa = PBXGroup;
+			children = (
+				689DAC8019C47E7100955A94 /* BusLineViewController.h */,
+				689DAC8119C47E7100955A94 /* BusLineViewController.m */,
+				689DAC8219C47E7100955A94 /* BusStopViewController.h */,
+				689DAC8319C47E7100955A94 /* BusStopViewController.m */,
+				689DAC8419C47E7100955A94 /* GeoViewController.h */,
+				689DAC8519C47E7100955A94 /* GeoViewController.m */,
+				689DAC8619C47E7100955A94 /* InvertGeoViewController.h */,
+				689DAC8719C47E7100955A94 /* InvertGeoViewController.m */,
+				689DAC8819C47E7100955A94 /* NavigationViewController.h */,
+				689DAC8919C47E7100955A94 /* NavigationViewController.m */,
+				689DAC8A19C47E7100955A94 /* PoiViewController.h */,
+				689DAC8B19C47E7100955A94 /* PoiViewController.m */,
+			);
+			path = SearchBaseControllers;
+			sourceTree = "<group>";
+		};
+		689DAC8C19C47E7100955A94 /* SearchDetailControllers */ = {
+			isa = PBXGroup;
+			children = (
+				689DAC8D19C47E7100955A94 /* AddressComponentDetailViewController.h */,
+				689DAC8E19C47E7100955A94 /* AddressComponentDetailViewController.m */,
+				689DAC8F19C47E7100955A94 /* BizExtenViewController.h */,
+				689DAC9019C47E7100955A94 /* BizExtenViewController.m */,
+				689DAC9119C47E7100955A94 /* BusLineDetailViewController.h */,
+				689DAC9219C47E7100955A94 /* BusLineDetailViewController.m */,
+				689DAC9319C47E7100955A94 /* BusStopDetailViewController.h */,
+				689DAC9419C47E7100955A94 /* BusStopDetailViewController.m */,
+				689DAC9519C47E7100955A94 /* CinemaDeepViewController.h */,
+				689DAC9619C47E7100955A94 /* CinemaDeepViewController.m */,
+				689DAC9719C47E7100955A94 /* DeepContentViewController.h */,
+				689DAC9819C47E7100955A94 /* DeepContentViewController.m */,
+				689DAC9919C47E7100955A94 /* DiningDeepViewController.h */,
+				689DAC9A19C47E7100955A94 /* DiningDeepViewController.m */,
+				689DAC9B19C47E7100955A94 /* GeoDetailViewController.h */,
+				689DAC9C19C47E7100955A94 /* GeoDetailViewController.m */,
+				689DAC9D19C47E7100955A94 /* GroupBuyDetailViewController.h */,
+				689DAC9E19C47E7100955A94 /* GroupBuyDetailViewController.m */,
+				689DAC9F19C47E7100955A94 /* HotelDeepViewController.h */,
+				689DACA019C47E7100955A94 /* HotelDeepViewController.m */,
+				689DACA119C47E7100955A94 /* InvertGeoDetailViewController.h */,
+				689DACA219C47E7100955A94 /* InvertGeoDetailViewController.m */,
+				689DACA319C47E7100955A94 /* MovieInfoViewController.h */,
+				689DACA419C47E7100955A94 /* MovieInfoViewController.m */,
+				689DACA519C47E7100955A94 /* PathDetailViewController.h */,
+				689DACA619C47E7100955A94 /* PathDetailViewController.m */,
+				689DACA719C47E7100955A94 /* PoiDetailViewController.h */,
+				689DACA819C47E7100955A94 /* PoiDetailViewController.m */,
+				689DACA919C47E7100955A94 /* RichContentViewController.h */,
+				689DACAA19C47E7100955A94 /* RichContentViewController.m */,
+				689DACAB19C47E7100955A94 /* RoadDetailViewController.h */,
+				689DACAC19C47E7100955A94 /* RoadDetailViewController.m */,
+				689DACAD19C47E7100955A94 /* RoadInterDetailViewController.h */,
+				689DACAE19C47E7100955A94 /* RoadInterDetailViewController.m */,
+				689DACAF19C47E7100955A94 /* RoomInfoViewController.h */,
+				689DACB019C47E7100955A94 /* RoomInfoViewController.m */,
+				689DACB119C47E7100955A94 /* RouteDetailViewController.h */,
+				689DACB219C47E7100955A94 /* RouteDetailViewController.m */,
+				689DACB319C47E7100955A94 /* ScenicDeepViewController.h */,
+				689DACB419C47E7100955A94 /* ScenicDeepViewController.m */,
+				689DACB519C47E7100955A94 /* SegmentDetailViewController.h */,
+				689DACB619C47E7100955A94 /* SegmentDetailViewController.m */,
+				689DACB719C47E7100955A94 /* StepDetailViewController.h */,
+				689DACB819C47E7100955A94 /* StepDetailViewController.m */,
+				689DACB919C47E7100955A94 /* StreetNumberDetailViewController.h */,
+				689DACBA19C47E7100955A94 /* StreetNumberDetailViewController.m */,
+				689DACBB19C47E7100955A94 /* TicketViewController.h */,
+				689DACBC19C47E7100955A94 /* TicketViewController.m */,
+				689DACBD19C47E7100955A94 /* TransitDetailViewController.h */,
+				689DACBE19C47E7100955A94 /* TransitDetailViewController.m */,
+				689DACBF19C47E7100955A94 /* WalkingDetailViewController.h */,
+				689DACC019C47E7100955A94 /* WalkingDetailViewController.m */,
+			);
+			path = SearchDetailControllers;
+			sourceTree = "<group>";
+		};
+		689DACC119C47E7100955A94 /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				689DACC219C47E7100955A94 /* InfoPlist.strings */,
+			);
+			name = en.lproj;
+			path = WalkingTrace/en.lproj;
+			sourceTree = "<group>";
+		};
+		689DACC719C47E7100955A94 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				689DACC819C47E7100955A94 /* animatedAnnotation */,
+				689DACD319C47E7100955A94 /* endPoint.png */,
+				689DACD419C47E7100955A94 /* endPoint@2x.png */,
+				689DACD519C47E7100955A94 /* hema.png */,
+				689DACD619C47E7100955A94 /* startPoint.png */,
+				689DACD719C47E7100955A94 /* startPoint@2x.png */,
+			);
+			name = Images;
+			path = WalkingTrace/Images;
+			sourceTree = "<group>";
+		};
+		689DACC819C47E7100955A94 /* animatedAnnotation */ = {
+			isa = PBXGroup;
+			children = (
+				689DACC919C47E7100955A94 /* animatedCar */,
+				689DACCE19C47E7100955A94 /* animatedTrain */,
+			);
+			path = animatedAnnotation;
+			sourceTree = "<group>";
+		};
+		689DACC919C47E7100955A94 /* animatedCar */ = {
+			isa = PBXGroup;
+			children = (
+				689DACCA19C47E7100955A94 /* animatedCar_1.png */,
+				689DACCB19C47E7100955A94 /* animatedCar_2.png */,
+				689DACCC19C47E7100955A94 /* animatedCar_3.png */,
+				689DACCD19C47E7100955A94 /* animatedCar_4.png */,
+			);
+			path = animatedCar;
+			sourceTree = "<group>";
+		};
+		689DACCE19C47E7100955A94 /* animatedTrain */ = {
+			isa = PBXGroup;
+			children = (
+				689DACCF19C47E7100955A94 /* animatedTrain_1.png */,
+				689DACD019C47E7100955A94 /* animatedTrain_2.png */,
+				689DACD119C47E7100955A94 /* animatedTrain_3.png */,
+				689DACD219C47E7100955A94 /* animatedTrain_4.png */,
+			);
+			path = animatedTrain;
+			sourceTree = "<group>";
+		};
+		689DACD819C47E7100955A94 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				689DACD919C47E7100955A94 /* AnimatedAnnotation.h */,
+				689DACDA19C47E7100955A94 /* AnimatedAnnotation.m */,
+				689DACDB19C47E7100955A94 /* AnimatedAnnotationView.h */,
+				689DACDC19C47E7100955A94 /* AnimatedAnnotationView.m */,
+				689DACDD19C47E7100955A94 /* BusStopAnnotation.h */,
+				689DACDE19C47E7100955A94 /* BusStopAnnotation.m */,
+				689DACDF19C47E7100955A94 /* CustomAnnotationView.h */,
+				689DACE019C47E7100955A94 /* CustomAnnotationView.m */,
+				689DACE119C47E7100955A94 /* CustomCalloutView.h */,
+				689DACE219C47E7100955A94 /* CustomCalloutView.m */,
+				689DACE319C47E7100955A94 /* FaceOverlay.h */,
+				689DACE419C47E7100955A94 /* FaceOverlay.m */,
+				689DACE519C47E7100955A94 /* FaceOverlayView.h */,
+				689DACE619C47E7100955A94 /* FaceOverlayView.m */,
+				689DACE719C47E7100955A94 /* GeocodeAnnotation.h */,
+				689DACE819C47E7100955A94 /* GeocodeAnnotation.m */,
+				689DACE919C47E7100955A94 /* LineDashPolyline.h */,
+				689DACEA19C47E7100955A94 /* LineDashPolyline.m */,
+				689DACEB19C47E7100955A94 /* POIAnnotation.h */,
+				689DACEC19C47E7100955A94 /* POIAnnotation.m */,
+				689DACED19C47E7100955A94 /* ReGeocodeAnnotation.h */,
+				689DACEE19C47E7100955A94 /* ReGeocodeAnnotation.m */,
+			);
+			name = Models;
+			path = WalkingTrace/Models;
+			sourceTree = "<group>";
+		};
+		689DACF119C47E7100955A94 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				689DACF219C47E7100955A94 /* CommonUtility.h */,
+				689DACF319C47E7100955A94 /* CommonUtility.m */,
+			);
+			name = Utility;
+			path = WalkingTrace/Utility;
+			sourceTree = "<group>";
+		};
 		68C1C17C19BF4CF60076BC63 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				689DAC4A19C471A800955A94 /* MyPanelViewController.h */,
+				689DAC4B19C471A800955A94 /* MyPanelViewController.m */,
 				68C1C17D19BF4D240076BC63 /* UserInfoGatherViewController.h */,
 				68C1C17E19BF4D240076BC63 /* UserInfoGatherViewController.m */,
 			);
@@ -265,8 +826,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				689DAD5719C482F000955A94 /* AMap.bundle in Resources */,
+				689DAD4619C47E7100955A94 /* NavWalkoutViewController.xib in Resources */,
+				689DAD3219C47E7100955A94 /* animatedTrain_1.png in Resources */,
 				6878DB4F19B163A2009FBECB /* Images.xcassets in Resources */,
+				689DAD2B19C47E7100955A94 /* InfoPlist.strings in Resources */,
+				689DAD3119C47E7100955A94 /* animatedCar_4.png in Resources */,
+				689DAD3619C47E7100955A94 /* endPoint.png in Resources */,
+				689DAD3419C47E7100955A94 /* animatedTrain_3.png in Resources */,
 				6878DB7119B16C59009FBECB /* loginImage.jpg in Resources */,
+				689DAD2E19C47E7100955A94 /* animatedCar_1.png in Resources */,
+				689DACFA19C47E7100955A94 /* WalkingTraceViewController.xib in Resources */,
+				689DAD3319C47E7100955A94 /* animatedTrain_2.png in Resources */,
+				689DAD3519C47E7100955A94 /* animatedTrain_4.png in Resources */,
+				689DAD3819C47E7100955A94 /* hema.png in Resources */,
+				689DAD3019C47E7100955A94 /* animatedCar_3.png in Resources */,
+				689DAD3719C47E7100955A94 /* endPoint@2x.png in Resources */,
+				689DAD3A19C47E7100955A94 /* startPoint@2x.png in Resources */,
+				689DAD3919C47E7100955A94 /* startPoint.png in Resources */,
+				689DAD2F19C47E7100955A94 /* animatedCar_2.png in Resources */,
 				6878DB4119B163A2009FBECB /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,10 +864,76 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				689DACFC19C47E7100955A94 /* BaseMapViewController.m in Sources */,
+				689DAD2519C47E7100955A94 /* SegmentDetailViewController.m in Sources */,
+				689DAC4619C1F00800955A94 /* ScheduleCalendarViewController.m in Sources */,
+				689DACFF19C47E7100955A94 /* AnimatedAnnotationViewController.m in Sources */,
+				689DACF519C47E7100955A94 /* DataFile.m in Sources */,
+				689DAD2419C47E7100955A94 /* ScenicDeepViewController.m in Sources */,
+				689DAD1619C47E7100955A94 /* DeepContentViewController.m in Sources */,
+				689DAD0F19C47E7100955A94 /* NavigationViewController.m in Sources */,
+				689DAD1F19C47E7100955A94 /* RichContentViewController.m in Sources */,
+				689DAD0219C47E7100955A94 /* CustomOverlayViewController.m in Sources */,
+				689DAD4019C47E7100955A94 /* FaceOverlay.m in Sources */,
+				689DAD0519C47E7100955A94 /* MapTypeViewController.m in Sources */,
+				689DAD1419C47E7100955A94 /* BusStopDetailViewController.m in Sources */,
+				689DACFE19C47E7100955A94 /* AddGestureViewController.m in Sources */,
+				689DAD0C19C47E7100955A94 /* BusStopViewController.m in Sources */,
+				689DAD4219C47E7100955A94 /* GeocodeAnnotation.m in Sources */,
+				689DAD1719C47E7100955A94 /* DiningDeepViewController.m in Sources */,
+				689DAD0619C47E7100955A94 /* OverlayViewController.m in Sources */,
+				689DAD2019C47E7100955A94 /* RoadDetailViewController.m in Sources */,
+				689DAD2919C47E7100955A94 /* TransitDetailViewController.m in Sources */,
+				689DAD3E19C47E7100955A94 /* CustomAnnotationView.m in Sources */,
+				689DAD0019C47E7100955A94 /* AnnotationViewController.m in Sources */,
+				689DAD3D19C47E7100955A94 /* BusStopAnnotation.m in Sources */,
+				689DAD1919C47E7100955A94 /* GroupBuyDetailViewController.m in Sources */,
 				6878DB6E19B164F7009FBECB /* LoginViewController.m in Sources */,
+				689DAD4319C47E7100955A94 /* LineDashPolyline.m in Sources */,
+				689DAD1519C47E7100955A94 /* CinemaDeepViewController.m in Sources */,
+				689DAD3F19C47E7100955A94 /* CustomCalloutView.m in Sources */,
+				689DACF719C47E7100955A94 /* NavWalkoutViewController.m in Sources */,
+				689DAD0319C47E7100955A94 /* GeodesicViewController.m in Sources */,
+				689DAD0919C47E7100955A94 /* UserLocationViewController.m in Sources */,
+				689DAD0E19C47E7100955A94 /* InvertGeoViewController.m in Sources */,
+				689DAD1119C47E7100955A94 /* AddressComponentDetailViewController.m in Sources */,
+				689DAD1219C47E7100955A94 /* BizExtenViewController.m in Sources */,
 				6878DB4719B163A2009FBECB /* AppDelegate.m in Sources */,
+				689DAD0419C47E7100955A94 /* GestureAttributesViewController.m in Sources */,
+				689DAD1319C47E7100955A94 /* BusLineDetailViewController.m in Sources */,
+				689DAD2819C47E7100955A94 /* TicketViewController.m in Sources */,
+				689DAD2219C47E7100955A94 /* RoomInfoViewController.m in Sources */,
+				689DAD1C19C47E7100955A94 /* MovieInfoViewController.m in Sources */,
 				68C1C17F19BF4D240076BC63 /* UserInfoGatherViewController.m in Sources */,
+				689DACF619C47E7100955A94 /* Coords.m in Sources */,
+				689DAD0D19C47E7100955A94 /* GeoViewController.m in Sources */,
+				689DAD2119C47E7100955A94 /* RoadInterDetailViewController.m in Sources */,
+				689DAD4119C47E7100955A94 /* FaceOverlayView.m in Sources */,
 				6878DB4319B163A2009FBECB /* main.m in Sources */,
+				689DAD2319C47E7100955A94 /* RouteDetailViewController.m in Sources */,
+				689DAD0119C47E7100955A94 /* CustomAnnotationViewController.m in Sources */,
+				689DAD1B19C47E7100955A94 /* InvertGeoDetailViewController.m in Sources */,
+				689DAD0719C47E7100955A94 /* ScreenshotViewController.m in Sources */,
+				689DAD3C19C47E7100955A94 /* AnimatedAnnotationView.m in Sources */,
+				689DAD0A19C47E7100955A94 /* ScreenshotDetailViewController.m in Sources */,
+				689DAD1819C47E7100955A94 /* GeoDetailViewController.m in Sources */,
+				689DAD2A19C47E7100955A94 /* WalkingDetailViewController.m in Sources */,
+				689DAD2719C47E7100955A94 /* StreetNumberDetailViewController.m in Sources */,
+				689DAD2619C47E7100955A94 /* StepDetailViewController.m in Sources */,
+				689DACF819C47E7100955A94 /* WalkingTraceViewController.m in Sources */,
+				689DAC4C19C471A800955A94 /* MyPanelViewController.m in Sources */,
+				689DAD0B19C47E7100955A94 /* BusLineViewController.m in Sources */,
+				689DACFD19C47E7100955A94 /* MainViewController.m in Sources */,
+				689DAD3B19C47E7100955A94 /* AnimatedAnnotation.m in Sources */,
+				689DAD0819C47E7100955A94 /* TrafficViewController.m in Sources */,
+				689DAD4719C47E7100955A94 /* CommonUtility.m in Sources */,
+				689DAD1019C47E7100955A94 /* PoiViewController.m in Sources */,
+				689DAD1E19C47E7100955A94 /* PoiDetailViewController.m in Sources */,
+				689DACF919C47E7100955A94 /* Coord.m in Sources */,
+				689DAD4519C47E7100955A94 /* ReGeocodeAnnotation.m in Sources */,
+				689DAD1D19C47E7100955A94 /* PathDetailViewController.m in Sources */,
+				689DAD1A19C47E7100955A94 /* HotelDeepViewController.m in Sources */,
+				689DAD4419C47E7100955A94 /* POIAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +968,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				6878DB5F19B163A2009FBECB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		689DACC219C47E7100955A94 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				689DACC319C47E7100955A94 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -406,10 +1058,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ExGym/WalkingTrace/Extern",
+					"$(PROJECT_DIR)/ExGym/Extern",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ExGym/ExGym-Prefix.pch";
 				INFOPLIST_FILE = "ExGym/ExGym-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -420,10 +1079,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_NS_ASSERTIONS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ExGym/WalkingTrace/Extern",
+					"$(PROJECT_DIR)/ExGym/Extern",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ExGym/ExGym-Prefix.pch";
 				INFOPLIST_FILE = "ExGym/ExGym-Info.plist";
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

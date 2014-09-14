@@ -8,15 +8,33 @@
 
 #import "AppDelegate.h"
 #import "LoginViewController.h"
+#import "APIKey.h"
+#import <MAMapKit/MAMapKit.h>
 
 @implementation AppDelegate
+
+- (void)configureAPIKey
+{
+    if ([APIKey length] == 0)
+    {
+        NSString *name   = [NSString stringWithFormat:@"\nSDKVersion:%@\nFILE:%s\nLINE:%d\nMETHOD:%s", [MAMapServices sharedServices].SDKVersion, __FILE__, __LINE__, __func__];
+        NSString *reason = [NSString stringWithFormat:@"请首先配置APIKey.h中的APIKey, 申请APIKey参考见 http://api.amap.com"];
+        
+        @throw [NSException exceptionWithName:name
+                                       reason:reason
+                                     userInfo:nil];
+    }
+    
+    [MAMapServices sharedServices].apiKey = (NSString *)APIKey;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-
     self.window.backgroundColor = [UIColor whiteColor];
-    
+
+    [self configureAPIKey];
+
     
     LoginViewController *loginViewController = [[LoginViewController alloc] init];
     navigationController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
