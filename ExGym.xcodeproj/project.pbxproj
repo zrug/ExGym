@@ -110,9 +110,14 @@
 		689DAD5119C4805F00955A94 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 689DAD5019C4805F00955A94 /* CoreTelephony.framework */; };
 		689DAD5419C4825300955A94 /* AMapSearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 689DAD5219C4825300955A94 /* AMapSearchKit.framework */; };
 		689DAD5519C4825300955A94 /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 689DAD5319C4825300955A94 /* MAMapKit.framework */; };
-		689DAD5719C482F000955A94 /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 689DAD5619C482F000955A94 /* AMap.bundle */; };
 		689DAD5919C4830F00955A94 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 689DAD5819C4830F00955A94 /* Security.framework */; };
 		689DAD5B19C4832200955A94 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 689DAD5A19C4832200955A94 /* CoreLocation.framework */; };
+		689DADBC19C72EA600955A94 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DADB219C72EA600955A94 /* FMDatabase.m */; };
+		689DADBD19C72EA600955A94 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DADB419C72EA600955A94 /* FMDatabaseAdditions.m */; };
+		689DADBE19C72EA600955A94 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DADB619C72EA600955A94 /* FMDatabasePool.m */; };
+		689DADBF19C72EA600955A94 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DADB819C72EA600955A94 /* FMDatabaseQueue.m */; };
+		689DADC019C72EA600955A94 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DADBB19C72EA600955A94 /* FMResultSet.m */; };
+		689DADC219C741F900955A94 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 689DADC119C741F900955A94 /* libsqlite3.dylib */; };
 		68C1C17F19BF4D240076BC63 /* UserInfoGatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C1C17E19BF4D240076BC63 /* UserInfoGatherViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -302,9 +307,20 @@
 		689DAD5019C4805F00955A94 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		689DAD5219C4825300955A94 /* AMapSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AMapSearchKit.framework; path = ExGym/Extern/AMapSearchKit.framework; sourceTree = "<group>"; };
 		689DAD5319C4825300955A94 /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MAMapKit.framework; path = ExGym/Extern/MAMapKit.framework; sourceTree = "<group>"; };
-		689DAD5619C482F000955A94 /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AMap.bundle; path = ExGym/Extern/MAMapKit.framework/Versions/2.1.3/Resources/AMap.bundle; sourceTree = "<group>"; };
 		689DAD5819C4830F00955A94 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		689DAD5A19C4832200955A94 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		689DADB119C72EA600955A94 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		689DADB219C72EA600955A94 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		689DADB319C72EA600955A94 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		689DADB419C72EA600955A94 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		689DADB519C72EA600955A94 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		689DADB619C72EA600955A94 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		689DADB719C72EA600955A94 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		689DADB819C72EA600955A94 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		689DADB919C72EA600955A94 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		689DADBA19C72EA600955A94 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		689DADBB19C72EA600955A94 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		689DADC119C741F900955A94 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		68C1C17D19BF4D240076BC63 /* UserInfoGatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserInfoGatherViewController.h; path = User/UserInfoGatherViewController.h; sourceTree = "<group>"; };
 		68C1C17E19BF4D240076BC63 /* UserInfoGatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserInfoGatherViewController.m; path = User/UserInfoGatherViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -314,6 +330,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				689DADC219C741F900955A94 /* libsqlite3.dylib in Frameworks */,
 				689DAD5B19C4832200955A94 /* CoreLocation.framework in Frameworks */,
 				689DAD5919C4830F00955A94 /* Security.framework in Frameworks */,
 				689DAD5119C4805F00955A94 /* CoreTelephony.framework in Frameworks */,
@@ -345,7 +362,6 @@
 		6878DB2A19B163A2009FBECB = {
 			isa = PBXGroup;
 			children = (
-				689DAD5619C482F000955A94 /* AMap.bundle */,
 				6878DB3C19B163A2009FBECB /* ExGym */,
 				6878DB5B19B163A2009FBECB /* ExGymTests */,
 				6878DB3519B163A2009FBECB /* Frameworks */,
@@ -365,6 +381,7 @@
 		6878DB3519B163A2009FBECB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				689DADC119C741F900955A94 /* libsqlite3.dylib */,
 				689DAD5A19C4832200955A94 /* CoreLocation.framework */,
 				689DAD5819C4830F00955A94 /* Security.framework */,
 				689DAD5219C4825300955A94 /* AMapSearchKit.framework */,
@@ -385,6 +402,7 @@
 		6878DB3C19B163A2009FBECB /* ExGym */ = {
 			isa = PBXGroup;
 			children = (
+				689DADB019C72EA600955A94 /* fmdb */,
 				689DAC4D19C47DEC00955A94 /* walkingTrace */,
 				6878DB6F19B16C48009FBECB /* images */,
 				6878DB4519B163A2009FBECB /* AppDelegate.h */,
@@ -464,8 +482,8 @@
 				689DAC5819C47E7100955A94 /* WalkingTraceViewController.xib */,
 				689DAC5319C47E7100955A94 /* Coords.h */,
 				689DAC5019C47E7100955A94 /* Coords.m */,
-				689DAC5419C47E7100955A94 /* Coord.m */,
 				689DAC5519C47E7100955A94 /* Coord.h */,
+				689DAC5419C47E7100955A94 /* Coord.m */,
 				689DAC5619C47E7100955A94 /* DataFile.h */,
 				689DAC4F19C47E7100955A94 /* DataFile.m */,
 				689DAC5A19C47E7100955A94 /* Configuration */,
@@ -731,6 +749,24 @@
 			path = WalkingTrace/Utility;
 			sourceTree = "<group>";
 		};
+		689DADB019C72EA600955A94 /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				689DADB119C72EA600955A94 /* FMDatabase.h */,
+				689DADB219C72EA600955A94 /* FMDatabase.m */,
+				689DADB319C72EA600955A94 /* FMDatabaseAdditions.h */,
+				689DADB419C72EA600955A94 /* FMDatabaseAdditions.m */,
+				689DADB519C72EA600955A94 /* FMDatabasePool.h */,
+				689DADB619C72EA600955A94 /* FMDatabasePool.m */,
+				689DADB719C72EA600955A94 /* FMDatabaseQueue.h */,
+				689DADB819C72EA600955A94 /* FMDatabaseQueue.m */,
+				689DADB919C72EA600955A94 /* FMDB.h */,
+				689DADBA19C72EA600955A94 /* FMResultSet.h */,
+				689DADBB19C72EA600955A94 /* FMResultSet.m */,
+			);
+			path = fmdb;
+			sourceTree = "<group>";
+		};
 		68C1C17C19BF4CF60076BC63 /* User */ = {
 			isa = PBXGroup;
 			children = (
@@ -826,7 +862,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				689DAD5719C482F000955A94 /* AMap.bundle in Resources */,
 				689DAD4619C47E7100955A94 /* NavWalkoutViewController.xib in Resources */,
 				689DAD3219C47E7100955A94 /* animatedTrain_1.png in Resources */,
 				6878DB4F19B163A2009FBECB /* Images.xcassets in Resources */,
@@ -869,6 +904,7 @@
 				689DAC4619C1F00800955A94 /* ScheduleCalendarViewController.m in Sources */,
 				689DACFF19C47E7100955A94 /* AnimatedAnnotationViewController.m in Sources */,
 				689DACF519C47E7100955A94 /* DataFile.m in Sources */,
+				689DADBE19C72EA600955A94 /* FMDatabasePool.m in Sources */,
 				689DAD2419C47E7100955A94 /* ScenicDeepViewController.m in Sources */,
 				689DAD1619C47E7100955A94 /* DeepContentViewController.m in Sources */,
 				689DAD0F19C47E7100955A94 /* NavigationViewController.m in Sources */,
@@ -887,6 +923,7 @@
 				689DAD3E19C47E7100955A94 /* CustomAnnotationView.m in Sources */,
 				689DAD0019C47E7100955A94 /* AnnotationViewController.m in Sources */,
 				689DAD3D19C47E7100955A94 /* BusStopAnnotation.m in Sources */,
+				689DADBD19C72EA600955A94 /* FMDatabaseAdditions.m in Sources */,
 				689DAD1919C47E7100955A94 /* GroupBuyDetailViewController.m in Sources */,
 				6878DB6E19B164F7009FBECB /* LoginViewController.m in Sources */,
 				689DAD4319C47E7100955A94 /* LineDashPolyline.m in Sources */,
@@ -911,10 +948,12 @@
 				689DAD4119C47E7100955A94 /* FaceOverlayView.m in Sources */,
 				6878DB4319B163A2009FBECB /* main.m in Sources */,
 				689DAD2319C47E7100955A94 /* RouteDetailViewController.m in Sources */,
+				689DADBF19C72EA600955A94 /* FMDatabaseQueue.m in Sources */,
 				689DAD0119C47E7100955A94 /* CustomAnnotationViewController.m in Sources */,
 				689DAD1B19C47E7100955A94 /* InvertGeoDetailViewController.m in Sources */,
 				689DAD0719C47E7100955A94 /* ScreenshotViewController.m in Sources */,
 				689DAD3C19C47E7100955A94 /* AnimatedAnnotationView.m in Sources */,
+				689DADBC19C72EA600955A94 /* FMDatabase.m in Sources */,
 				689DAD0A19C47E7100955A94 /* ScreenshotDetailViewController.m in Sources */,
 				689DAD1819C47E7100955A94 /* GeoDetailViewController.m in Sources */,
 				689DAD2A19C47E7100955A94 /* WalkingDetailViewController.m in Sources */,
@@ -929,6 +968,7 @@
 				689DAD4719C47E7100955A94 /* CommonUtility.m in Sources */,
 				689DAD1019C47E7100955A94 /* PoiViewController.m in Sources */,
 				689DAD1E19C47E7100955A94 /* PoiDetailViewController.m in Sources */,
+				689DADC019C72EA600955A94 /* FMResultSet.m in Sources */,
 				689DACF919C47E7100955A94 /* Coord.m in Sources */,
 				689DAD4519C47E7100955A94 /* ReGeocodeAnnotation.m in Sources */,
 				689DAD1D19C47E7100955A94 /* PathDetailViewController.m in Sources */,
