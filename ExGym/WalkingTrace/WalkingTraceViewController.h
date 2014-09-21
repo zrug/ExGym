@@ -17,7 +17,7 @@
 
 @property (nonatomic, strong) MAMapView *mapView;
 @property (nonatomic, strong) CBCentralManager *manager;
-@property (nonatomic, strong) CBPeripheral *peripheral;
+@property (nonatomic, strong) CBPeripheral *myPeripheral;
 
 -(void)newWalkingTrace;
 -(void)walkingReview:(Coords *)coords;

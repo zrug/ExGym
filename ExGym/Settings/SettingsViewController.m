@@ -51,23 +51,32 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    selectedRow = -1;
+    
     if (IOS7) {
         self.view.bounds  = CGRectMake(0, -64, self.view.bounds.size.width, self.view.bounds.size.height);
     }
     
     _manager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
     
-    UIButton *scan = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [scan setTitle:@"扫描" forState:UIControlStateNormal];
-    scan.frame = CGRectMake(20, 210, 60, 30);
-    [scan addTarget:self action:@selector(scanClick) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:scan];
+    _scan = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [_scan setTitle:@"扫描" forState:UIControlStateNormal];
+    _scan.frame = CGRectMake(20, 210, 60, 30);
+    [_scan addTarget:self action:@selector(scanClick) forControlEvents:UIControlEventTouchUpInside];
+    [_scan setEnabled:NO];
+    [self.view addSubview:_scan];
     
     _connect = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [_connect setTitle:@"连接" forState:UIControlStateNormal];
     _connect.frame = CGRectMake(90, 210, 60, 30);
     [_connect addTarget:self action:@selector(connectClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_connect];
+    
+    _bpmtest = [[UILabel alloc] initWithFrame:CGRectMake(160, 210, 160, 30)];
+    [_bpmtest setFont:[UIFont fontWithName:@"DINCondensed-Bold" size:14]];
+    _bpmtest.text = @"未连接";
+    _bpmtest.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:_bpmtest];
     
     _cbReady = false;
     _nDevices = [[NSMutableArray alloc]init];
@@ -81,7 +90,9 @@
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
+    NSLog(@"clear settings shit");
     self.peripheral.delegate = nil;
+    [self.manager stopScan];
     self.manager.delegate = nil;
 }
 
@@ -103,11 +114,15 @@
     static NSString *identified = @"cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identified];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identified];
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identified];
     }
     CBPeripheral *p = [_nDevices objectAtIndex:indexPath.row];
     cell.textLabel.text = p.name;
     cell.textLabel.font = [UIFont fontWithName:@"DINCondensed-Bold" size:24];
+    if (_cbReady && indexPath.row == selectedRow)
+        cell.detailTextLabel.text = @"已连接";
+    else
+        cell.detailTextLabel.text = @"";
     
     //cell.textLabel.text = [_nDevices objectAtIndex:indexPath.row];
     return cell;
@@ -115,7 +130,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    selectedRow = indexPath.row;
 }
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -126,7 +141,7 @@
 //textView更新
 -(void)updateLog:(NSString *)s
 {
-    
+    _bpmtest.text = s;
 }
 //实现代理方法
 -(void)selectCategary:(NSString *)name
@@ -138,17 +153,19 @@
 //扫描
 -(void)scanClick
 {
+    [_scan setEnabled:NO];
     NSLog(@"正在扫描外设 ...");
-    [self updateLog:@"正在扫描外设..."];
+    [self updateLog:@"扫描中..."];
     //[_activity startAnimating];
     [_manager scanForPeripheralsWithServices:nil options:@{CBCentralManagerScanOptionAllowDuplicatesKey : @YES }];
     
-    double delayInSeconds = 30.0;
+    double delayInSeconds = 5.0;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
         [self.manager stopScan];
         [_activity stopAnimating];
-        [self updateLog:@"扫描超时,停止扫描"];
+        [self updateLog:@"扫描结束"];
+        [_scan setEnabled:YES];
     });
 }
 
@@ -156,17 +173,26 @@
 
 -(void)connectClick:(id)sender
 {
-    if (_cbReady ==false) {
-        [self.manager connectPeripheral:_peripheral options:nil];
-        _cbReady = true;
-        [_connect setTitle:@"断开" forState:UIControlStateNormal];
-        [_deviceTable setUserInteractionEnabled:NO];
-    }else {
-        [self.manager cancelPeripheralConnection:_peripheral];
-        _cbReady = false;
-        [_connect setTitle:@"连接" forState:UIControlStateNormal];
-        [_deviceTable setUserInteractionEnabled:YES];
+    if (selectedRow >= 0) {
+        _peripheral = [_nDevices objectAtIndex:selectedRow];
+        if (_cbReady ==false) {
+            [self.manager connectPeripheral:_peripheral options:nil];
+            _cbReady = true;
+            [_connect setTitle:@"断开" forState:UIControlStateNormal];
+            [_deviceTable setUserInteractionEnabled:NO];
+        }else {
+            [self.manager cancelPeripheralConnection:_peripheral];
+            _cbReady = false;
+            [_connect setTitle:@"连接" forState:UIControlStateNormal];
+            [_deviceTable setUserInteractionEnabled:YES];
+            [self updateLog:@"已断开"];
+        }
+        [_deviceTable reloadData];
+    } else {
+        
+        NSLog(@"select a device");
     }
+    
 }
 
 //报警
@@ -181,32 +207,30 @@
 {
     if ([central state] == CBCentralManagerStatePoweredOff) {
         NSLog(@"蓝牙关闭。");
+        [self updateLog:@"蓝牙关闭"];
     }
     else if ([central state] == CBCentralManagerStatePoweredOn) {
         NSLog(@"蓝牙已准备就绪");
         [self scanClick];
+        [self updateLog:@"已准备就绪"];
     }
     else if ([central state] == CBCentralManagerStateUnauthorized) {
         NSLog(@"蓝牙状态无法认证");
+        [self updateLog:@"蓝牙无法认证"];
     }
     else if ([central state] == CBCentralManagerStateUnknown) {
         NSLog(@"蓝牙状态未知");
+        [self updateLog:@"蓝牙状态未知"];
     }
     else if ([central state] == CBCentralManagerStateUnsupported) {
         NSLog(@"设备不支持蓝牙");
+        [self updateLog:@"不支持蓝牙"];
     }
 }
 
 //查到外设后，停止扫描，连接设备
 -(void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI
 {
-    [self updateLog:[NSString stringWithFormat:@"已发现 peripheral: %@ rssi: %@, UUID: %@, advertisementData: %@ ", peripheral, RSSI, peripheral.UUID, advertisementData]];
-    _peripheral = peripheral;
-    [_manager stopScan];
-    NSLog(@"%@", [NSString stringWithFormat:@"已发现 peripheral: %@ rssi: %@, UUID: %@", peripheral.name, RSSI, peripheral.UUID, advertisementData]);
-    
-//    [_manager connectPeripheral:_peripheral options:nil];
-    
     BOOL replace = NO;
     // Match if we have this device from before
     for (int i=0; i < _nDevices.count; i++) {
@@ -224,16 +248,14 @@
 
 //连接外设成功，开始发现服务
 - (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral {
-    NSLog(@"%@", [NSString stringWithFormat:@"成功连接 peripheral: %@ with UUID: %@",peripheral,peripheral.UUID]);
-
-    [self updateLog:[NSString stringWithFormat:@"成功连接 peripheral: %@ with UUID: %@",peripheral,peripheral.UUID]];
+    NSLog(@"%@", [NSString stringWithFormat:@"成功连接 peripheral: %@ with UUID: %@", peripheral.name, [peripheral.identifier UUIDString]]);
     
     UserVars *uservar = [UserVars sharedInstance];
     uservar.peripheral = _peripheral;
     
     [_peripheral setDelegate:self];
     [_peripheral discoverServices:nil];
-    [self updateLog:@"扫描服务"];
+    [self updateLog:@"连接成功,扫描服务"];
     
 }
 //连接外设失败
@@ -244,7 +266,6 @@
 
 -(void)peripheralDidUpdateRSSI:(CBPeripheral *)peripheral error:(NSError *)error
 {
-    //NSLog(@"%s,%@",__PRETTY_FUNCTION__,peripheral);
     int rssi = abs([peripheral.RSSI intValue]);
     CGFloat ci = (rssi - 49) / (10 * 4.);
     NSString *length = [NSString stringWithFormat:@"发现BLT4.0热点:%@,距离:%.1fm",_peripheral,pow(10,ci)];
@@ -269,6 +290,7 @@
             if ([aChar.UUID isEqual:[CBUUID UUIDWithString:POLARH7_HRM_MEASUREMENT_CHARACTERISTIC_UUID]]) { // 2
                 [_peripheral setNotifyValue:YES forCharacteristic:aChar];
                 NSLog(@"Found heart rate measurement characteristic");
+                [self updateLog:@"发现心率计"];
             }
             // Request body sensor location
             else if ([aChar.UUID isEqual:[CBUUID UUIDWithString:POLARH7_HRM_BODY_LOCATION_CHARACTERISTIC_UUID]]) { // 3
@@ -317,9 +339,10 @@
     // Updated value for heart rate measurement received
     if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:POLARH7_HRM_MEASUREMENT_CHARACTERISTIC_UUID]]) { // 1
         // Get the Heart Rate Monitor BPM
-                NSLog(@"got characteristic.value");
-                int hrm = [self updateWithHRMData:characteristic.value];
-                NSLog(@"%@: %d", peripheral.name, hrm);
+//                NSLog(@"got characteristic.value: %@", characteristic.value);
+        int hrm = [self updateWithHRMData:characteristic.value];
+        NSLog(@"%@: %d", peripheral.name, hrm);
+        [self updateLog:[NSString stringWithFormat:@"测试心率：%d", hrm]];
     }
     // Retrieve the characteristic value for manufacturer name received
     if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:POLARH7_HRM_MANUFACTURER_NAME_CHARACTERISTIC_UUID]]) {  // 2

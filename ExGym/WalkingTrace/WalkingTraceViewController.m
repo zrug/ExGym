@@ -25,9 +25,11 @@
     BOOL tracker;
     double speedColor;
     NSArray *colorTable;
+    CLLocationManager *locationManager;
 }
 
 @property (nonatomic, strong) UILabel *lbDistance;
+@property (nonatomic, strong) UILabel *lbBpm;
 @property (nonatomic, strong) UILabel *lbUpdatingLocation;
 @property (nonatomic, strong) UIButton *btnSave;
 @property (nonatomic, strong) UIButton *btnRestart;
@@ -41,6 +43,7 @@
 @implementation WalkingTraceViewController
 
 @synthesize lbDistance = _lbDistance;
+@synthesize lbBpm = _lbBpm;
 @synthesize lbUpdatingLocation = _lbUpdatingLocation;
 @synthesize mapView = _mapView;
 @synthesize overlays = _overlays;
@@ -63,7 +66,7 @@
     self.mapView.showsUserLocation = YES;
 }
 
-- (void)initDistance {
+- (void)initInfos {
     CGRect distanceFrame = CGRectMake(15, 30, 160, 30);
     self.lbDistance.frame = distanceFrame;
     self.lbDistance.font = [UIFont systemFontOfSize:26.0];
@@ -73,6 +76,16 @@
     self.lbDistance.textAlignment = NSTextAlignmentLeft;
     [self.lbDistance setText:@"0.0"];
     [self.view addSubview:self.lbDistance];
+
+    CGRect bpmFrame = CGRectMake(15, 60, 160, 30);
+    self.lbBpm.frame = bpmFrame;
+    self.lbBpm.font = [UIFont systemFontOfSize:26.0];
+    self.lbBpm.textColor = [UIColor colorWithRed:.2 green:.1 blue:1 alpha:1];
+    self.lbBpm.shadowColor = [UIColor whiteColor];
+    self.lbBpm.shadowOffset = CGSizeMake(1, 1);
+    self.lbBpm.textAlignment = NSTextAlignmentLeft;
+    [self.lbBpm setText:@"0"];
+    [self.view addSubview:self.lbBpm];
 }
 
 - (void)initUpdatingLocation {
@@ -195,7 +208,17 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    NSLog(@"");
+    NSLog(@"准备心率计");
+    UserVars *userVars = [UserVars sharedInstance];
+    self.myPeripheral = userVars.peripheral;
+    self.manager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
+    
+    self.lbBpm.hidden = !tracker;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    self.myPeripheral.delegate = nil;
+    self.manager.delegate = nil;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -219,14 +242,17 @@
         self.coords = [[Coords alloc] init];
         self.overlays = [NSMutableArray array];
         self.lbDistance = [[UILabel alloc] initWithFrame:CGRectZero];
+        self.lbBpm = [[UILabel alloc] initWithFrame:CGRectZero];
         self.lbUpdatingLocation = [[UILabel alloc] initWithFrame:CGRectZero];
         timer = [NSDate date];
         tracker = NO;
         
-        self.peripheral = nil;
+        locationManager = [[CLLocationManager alloc] init];
+
+        self.myPeripheral = nil;
         
         [self initMapView];
-        [self initDistance];
+        [self initInfos];
 //        [self initUpdatingLocation];
     }
     return self;
@@ -235,14 +261,19 @@
 - (void)prepareTrace {
 //    NSLog(@"wtvc prepareTrace");
     self.title = @"准备中 ...";
+
+    // 8.0及以上版本需要这段代码才能获取GPS坐标
+    UIDevice *device = [UIDevice currentDevice];
+    NSString *systemVersion = [device systemVersion];
+    NSLog(@"the systemVersion: %@", systemVersion);
+    if ([systemVersion compare:@"8.0" options:NSNumericSearch] != NSOrderedAscending) {
+        [locationManager requestAlwaysAuthorization]; // 在后台也能拿到
+        [locationManager startUpdatingLocation];
+    }
+
     tracker = NO;
     [self.mapView setUserTrackingMode:MAUserTrackingModeFollow animated:YES];
     [self onMapView];
-    
-    UserVars *userVars = [UserVars sharedInstance];
-    self.peripheral = userVars.peripheral;
-    NSLog(@"已装备心率计: %@", self.peripheral.name);
-
 }
 - (void)startTrace {
 //    NSLog(@"wtvc startTrace");
@@ -250,13 +281,10 @@
     tracker = YES;
     [self clearMapView];
     [self setDistanceText:0.];
-    [self onMapView];
     [self.mapView setUserTrackingMode:MAUserTrackingModeFollow animated:YES];
+    [self onMapView];
     [self initButtons];
-    if (self.peripheral != nil) {
-        NSLog(@"心率读取中 ...");
-        self.peripheral.delegate = self;
-    }
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -267,7 +295,7 @@
 - (UIColor *)colorWithSpeed:(double)speed {
     int index = (int)speed / -2;
     if (index > 5) index = 5;
-    NSLog(@"colorWithSpeed: %i", index);
+//    NSLog(@"colorWithSpeed: %i", index);
     return [colorTable objectAtIndex:index];
 }
 
@@ -280,7 +308,7 @@
         polylineView.lineWidth   = 10.f;
 //        polylineView.strokeColor = [UIColor colorWithRed:.2 green:.1 blue:1 alpha:.8];
 
-        NSLog(@"mapView viewForOverlay speedColor: %0.0f", speedColor);
+//        NSLog(@"mapView viewForOverlay speedColor: %0.0f", speedColor);
         polylineView.strokeColor = [self colorWithSpeed:speedColor];
         
         return polylineView;
@@ -294,7 +322,6 @@
 }
 
 -(void)mapView:(MAMapView *)mapView didUpdateUserLocation:(MAUserLocation *)userLocation updatingLocation:(BOOL)updatingLocation {
-
     if (tracker) {
 
         if (updatingLocation) {
@@ -307,9 +334,9 @@
             double since = [timer timeIntervalSinceNow];
 
             if (since < -3.8) {
+                NSLog(@"coord: [%0.9f] [%0.9f]", userLocation.coordinate.latitude, userLocation.coordinate.longitude);
                 Coord *coord = [[Coord alloc] init];
                 [coord setCoordinateWithLat:userLocation.coordinate.latitude andLong:userLocation.coordinate.longitude];
-                NSLog(@"coord: [%0.9f] [%0.9f]", userLocation.coordinate.latitude, userLocation.coordinate.longitude);
                 // TODO: set speed color
                 
                 speedColor = coord.speedFromPrev;
@@ -338,17 +365,23 @@
 //扫描
 -(void)scanClick
 {
-    NSLog(@"正在连接心率计 ...");
+    NSLog(@"正在扫描外设 ...");
     //[_activity startAnimating];
     [_manager scanForPeripheralsWithServices:nil options:@{CBCentralManagerScanOptionAllowDuplicatesKey : @YES }];
     
-    double delayInSeconds = 30.0;
+    double delayInSeconds = 3.0;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
         [self.manager stopScan];
-        NSLog(@"连接超时！");
     });
 }
+
+//连接
+
+-(void)connectClick:(id)sender
+{
+}
+
 
 //开始查看服务，蓝牙开启
 -(void)centralManagerDidUpdateState:(CBCentralManager *)central
@@ -374,21 +407,25 @@
 //查到外设后，停止扫描，连接设备
 -(void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI
 {
-    [_manager stopScan];
-    NSLog(@"%@", [NSString stringWithFormat:@"已发现 peripheral: %@ rssi: %@, UUID: %@", peripheral.name, RSSI, peripheral.UUID, advertisementData]);
-    
-    [_manager connectPeripheral:_peripheral options:nil];
+    self.myPeripheral = peripheral;
+    [self.manager connectPeripheral:self.myPeripheral options:nil];
 }
 
 //连接外设成功，开始发现服务
 - (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral {
-    NSLog(@"%@", [NSString stringWithFormat:@"成功连接 peripheral: %@ with UUID: %@",peripheral,peripheral.UUID]);
+
+//    NSLog(@"%@", [NSString stringWithFormat:@"成功连接 peripheral: %@ with UUID: %@", peripheral.name, [peripheral.identifier UUIDString]]);
+//    NSLog(@"%@", [NSString stringWithFormat:@"myPeripheral: %@ with UUID: %@", self.myPeripheral.name, [self.myPeripheral.identifier UUIDString]]);
+    if ([[peripheral.identifier UUIDString] isEqualToString:[self.myPeripheral.identifier UUIDString]]) {
+        NSLog(@"找到了: %@", peripheral.name);
+        [self.manager stopScan];
+        [peripheral setDelegate:self];
+        [peripheral discoverServices:nil];
+    } else {
+        NSLog(@"不是这个，继续找 ...");
+    }
+//    [self.manager stopScan];
     
-    UserVars *uservar = [UserVars sharedInstance];
-    uservar.peripheral = _peripheral;
-    
-    [_peripheral setDelegate:self];
-    [_peripheral discoverServices:nil];
     
 }
 //连接外设失败
@@ -399,11 +436,6 @@
 
 -(void)peripheralDidUpdateRSSI:(CBPeripheral *)peripheral error:(NSError *)error
 {
-    //NSLog(@"%s,%@",__PRETTY_FUNCTION__,peripheral);
-    int rssi = abs([peripheral.RSSI intValue]);
-    CGFloat ci = (rssi - 49) / (10 * 4.);
-    NSString *length = [NSString stringWithFormat:@"发现BLT4.0热点:%@,距离:%.1fm",_peripheral,pow(10,ci)];
-    NSLog(@"发现BLT4.0热点, 距离：%@",length);
 }
 //已发现服务
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverServices:(NSError *)error
@@ -422,12 +454,12 @@
         {
             // Request heart rate notifications
             if ([aChar.UUID isEqual:[CBUUID UUIDWithString:POLARH7_HRM_MEASUREMENT_CHARACTERISTIC_UUID]]) { // 2
-                [_peripheral setNotifyValue:YES forCharacteristic:aChar];
+                [self.myPeripheral setNotifyValue:YES forCharacteristic:aChar];
                 NSLog(@"Found heart rate measurement characteristic");
             }
             // Request body sensor location
             else if ([aChar.UUID isEqual:[CBUUID UUIDWithString:POLARH7_HRM_BODY_LOCATION_CHARACTERISTIC_UUID]]) { // 3
-                [_peripheral readValueForCharacteristic:aChar];
+                [self.myPeripheral readValueForCharacteristic:aChar];
                 NSLog(@"Found body sensor location characteristic");
             }
         }
@@ -437,7 +469,7 @@
         for (CBCharacteristic *aChar in service.characteristics)
         {
             if ([aChar.UUID isEqual:[CBUUID UUIDWithString:POLARH7_HRM_MANUFACTURER_NAME_CHARACTERISTIC_UUID]]) {
-                [_peripheral readValueForCharacteristic:aChar];
+                [self.myPeripheral readValueForCharacteristic:aChar];
                 NSLog(@"Found a device manufacturer name characteristic");
             }
         }
@@ -472,9 +504,10 @@
     // Updated value for heart rate measurement received
     if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:POLARH7_HRM_MEASUREMENT_CHARACTERISTIC_UUID]]) { // 1
         // Get the Heart Rate Monitor BPM
-        NSLog(@"got characteristic.value");
+        //                NSLog(@"got characteristic.value: %@", characteristic.value);
         int hrm = [self updateWithHRMData:characteristic.value];
-        NSLog(@"%@: %d", peripheral.name, hrm);
+//        NSLog(@"%@: %d", peripheral.name, hrm);
+        self.lbBpm.text = [NSString stringWithFormat:@"%d", hrm];
     }
     // Retrieve the characteristic value for manufacturer name received
     if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:POLARH7_HRM_MANUFACTURER_NAME_CHARACTERISTIC_UUID]]) {  // 2

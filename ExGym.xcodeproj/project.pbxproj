@@ -10,6 +10,7 @@
 		68168FC419CD20F000E12D58 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68168FC319CD20F000E12D58 /* SettingsViewController.m */; };
 		68168FC719CD30BC00E12D58 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68168FC619CD30BC00E12D58 /* CoreBluetooth.framework */; };
 		68168FC919CEE03E00E12D58 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 68168FC819CEE03E00E12D58 /* User.m */; };
+		68168FCC19CF26BA00E12D58 /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 68168FCB19CF26BA00E12D58 /* AMap.bundle */; };
 		6878DB3719B163A2009FBECB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6878DB3619B163A2009FBECB /* Foundation.framework */; };
 		6878DB3919B163A2009FBECB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6878DB3819B163A2009FBECB /* CoreGraphics.framework */; };
 		6878DB3B19B163A2009FBECB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6878DB3A19B163A2009FBECB /* UIKit.framework */; };
@@ -140,6 +141,7 @@
 		68168FC619CD30BC00E12D58 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		68168FC819CEE03E00E12D58 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = User/User.m; sourceTree = "<group>"; };
 		68168FCA19CEE05000E12D58 /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = User.h; path = User/User.h; sourceTree = "<group>"; };
+		68168FCB19CF26BA00E12D58 /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AMap.bundle; sourceTree = "<group>"; };
 		6878DB3319B163A2009FBECB /* ExGym.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExGym.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6878DB3619B163A2009FBECB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6878DB3819B163A2009FBECB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -439,6 +441,7 @@
 		6878DB3D19B163A2009FBECB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				68168FCB19CF26BA00E12D58 /* AMap.bundle */,
 				6878DB3E19B163A2009FBECB /* ExGym-Info.plist */,
 				6878DB3F19B163A2009FBECB /* InfoPlist.strings */,
 				6878DB4219B163A2009FBECB /* main.m */,
@@ -894,6 +897,7 @@
 				6878DB7119B16C59009FBECB /* loginImage.jpg in Resources */,
 				689DAD2E19C47E7100955A94 /* animatedCar_1.png in Resources */,
 				689DACFA19C47E7100955A94 /* WalkingTraceViewController.xib in Resources */,
+				68168FCC19CF26BA00E12D58 /* AMap.bundle in Resources */,
 				689DAD3319C47E7100955A94 /* animatedTrain_2.png in Resources */,
 				689DAD3519C47E7100955A94 /* animatedTrain_4.png in Resources */,
 				689DAD3819C47E7100955A94 /* hema.png in Resources */,

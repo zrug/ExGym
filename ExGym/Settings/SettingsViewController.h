@@ -10,7 +10,9 @@
 #import <CoreBluetooth/CoreBluetooth.h>
 
 @interface SettingsViewController : UIViewController<CBCentralManagerDelegate,CBPeripheralDelegate,
-    UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
+    UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate> {
+        int selectedRow;
+}
 
 
 @property BOOL cbReady;
@@ -24,8 +26,9 @@
 @property (strong,nonatomic) NSMutableArray *nDevices;
 @property (strong,nonatomic) NSMutableArray *nServices;
 @property (strong,nonatomic) NSMutableArray *nCharacteristics;
-@property (nonatomic,strong) UITextView *textView;
 @property (nonatomic,strong) UIButton *connect;
+@property (nonatomic,strong) UIButton *scan;
+@property (nonatomic,strong) UILabel *bpmtest;
 @property (nonatomic,strong) UITableView *deviceTable;
 @property (nonatomic,strong) UIActivityIndicatorView *activity;
 
