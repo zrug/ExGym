@@ -9,7 +9,16 @@
 #import "WalkingTraceViewController.h"
 #import "Coords.h"
 #import "Coord.h"
+#import "User.h"
 #import "CommonUtility.h"
+
+#define POLARH7_HRM_DEVICE_INFO_SERVICE_UUID @"180A"
+#define POLARH7_HRM_HEART_RATE_SERVICE_UUID @"180D"
+
+#define POLARH7_HRM_MEASUREMENT_CHARACTERISTIC_UUID @"2A37"
+#define POLARH7_HRM_BODY_LOCATION_CHARACTERISTIC_UUID @"2A38"
+#define POLARH7_HRM_MANUFACTURER_NAME_CHARACTERISTIC_UUID @"2A29"
+
 
 @interface WalkingTraceViewController () {
     NSDate *timer;
@@ -180,11 +189,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    NSLog(@"");
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -212,6 +223,8 @@
         timer = [NSDate date];
         tracker = NO;
         
+        self.peripheral = nil;
+        
         [self initMapView];
         [self initDistance];
 //        [self initUpdatingLocation];
@@ -225,6 +238,11 @@
     tracker = NO;
     [self.mapView setUserTrackingMode:MAUserTrackingModeFollow animated:YES];
     [self onMapView];
+    
+    UserVars *userVars = [UserVars sharedInstance];
+    self.peripheral = userVars.peripheral;
+    NSLog(@"已装备心率计: %@", self.peripheral.name);
+
 }
 - (void)startTrace {
 //    NSLog(@"wtvc startTrace");
@@ -235,6 +253,10 @@
     [self onMapView];
     [self.mapView setUserTrackingMode:MAUserTrackingModeFollow animated:YES];
     [self initButtons];
+    if (self.peripheral != nil) {
+        NSLog(@"心率读取中 ...");
+        self.peripheral.delegate = self;
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -309,5 +331,162 @@
 -(void)walkingReview:(Coords *)coords {
 }
 
+
+
+
+
+//扫描
+-(void)scanClick
+{
+    NSLog(@"正在连接心率计 ...");
+    //[_activity startAnimating];
+    [_manager scanForPeripheralsWithServices:nil options:@{CBCentralManagerScanOptionAllowDuplicatesKey : @YES }];
+    
+    double delayInSeconds = 30.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [self.manager stopScan];
+        NSLog(@"连接超时！");
+    });
+}
+
+//开始查看服务，蓝牙开启
+-(void)centralManagerDidUpdateState:(CBCentralManager *)central
+{
+    if ([central state] == CBCentralManagerStatePoweredOff) {
+        NSLog(@"蓝牙关闭。");
+    }
+    else if ([central state] == CBCentralManagerStatePoweredOn) {
+        NSLog(@"蓝牙已准备就绪");
+        [self scanClick];
+    }
+    else if ([central state] == CBCentralManagerStateUnauthorized) {
+        NSLog(@"蓝牙状态无法认证");
+    }
+    else if ([central state] == CBCentralManagerStateUnknown) {
+        NSLog(@"蓝牙状态未知");
+    }
+    else if ([central state] == CBCentralManagerStateUnsupported) {
+        NSLog(@"设备不支持蓝牙");
+    }
+}
+
+//查到外设后，停止扫描，连接设备
+-(void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI
+{
+    [_manager stopScan];
+    NSLog(@"%@", [NSString stringWithFormat:@"已发现 peripheral: %@ rssi: %@, UUID: %@", peripheral.name, RSSI, peripheral.UUID, advertisementData]);
+    
+    [_manager connectPeripheral:_peripheral options:nil];
+}
+
+//连接外设成功，开始发现服务
+- (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral {
+    NSLog(@"%@", [NSString stringWithFormat:@"成功连接 peripheral: %@ with UUID: %@",peripheral,peripheral.UUID]);
+    
+    UserVars *uservar = [UserVars sharedInstance];
+    uservar.peripheral = _peripheral;
+    
+    [_peripheral setDelegate:self];
+    [_peripheral discoverServices:nil];
+    
+}
+//连接外设失败
+-(void)centralManager:(CBCentralManager *)central didFailToConnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error
+{
+    NSLog(@"%@",error);
+}
+
+-(void)peripheralDidUpdateRSSI:(CBPeripheral *)peripheral error:(NSError *)error
+{
+    //NSLog(@"%s,%@",__PRETTY_FUNCTION__,peripheral);
+    int rssi = abs([peripheral.RSSI intValue]);
+    CGFloat ci = (rssi - 49) / (10 * 4.);
+    NSString *length = [NSString stringWithFormat:@"发现BLT4.0热点:%@,距离:%.1fm",_peripheral,pow(10,ci)];
+    NSLog(@"发现BLT4.0热点, 距离：%@",length);
+}
+//已发现服务
+- (void)peripheral:(CBPeripheral *)peripheral didDiscoverServices:(NSError *)error
+{
+    for (CBService *service in peripheral.services) {
+        NSLog(@"Discovered service: %@", service.UUID);
+        [peripheral discoverCharacteristics:nil forService:service];
+    }
+}
+
+//已搜索到Characteristics
+- (void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(NSError *)error
+{
+    if ([service.UUID isEqual:[CBUUID UUIDWithString:POLARH7_HRM_HEART_RATE_SERVICE_UUID]])  {  // 1
+        for (CBCharacteristic *aChar in service.characteristics)
+        {
+            // Request heart rate notifications
+            if ([aChar.UUID isEqual:[CBUUID UUIDWithString:POLARH7_HRM_MEASUREMENT_CHARACTERISTIC_UUID]]) { // 2
+                [_peripheral setNotifyValue:YES forCharacteristic:aChar];
+                NSLog(@"Found heart rate measurement characteristic");
+            }
+            // Request body sensor location
+            else if ([aChar.UUID isEqual:[CBUUID UUIDWithString:POLARH7_HRM_BODY_LOCATION_CHARACTERISTIC_UUID]]) { // 3
+                [_peripheral readValueForCharacteristic:aChar];
+                NSLog(@"Found body sensor location characteristic");
+            }
+        }
+    }
+    // Retrieve Device Information Services for the Manufacturer Name
+    if ([service.UUID isEqual:[CBUUID UUIDWithString:POLARH7_HRM_DEVICE_INFO_SERVICE_UUID]])  { // 4
+        for (CBCharacteristic *aChar in service.characteristics)
+        {
+            if ([aChar.UUID isEqual:[CBUUID UUIDWithString:POLARH7_HRM_MANUFACTURER_NAME_CHARACTERISTIC_UUID]]) {
+                [_peripheral readValueForCharacteristic:aChar];
+                NSLog(@"Found a device manufacturer name characteristic");
+            }
+        }
+    }
+}
+
+/*
+ Update UI with heart rate data received from device
+ */
+- (int) updateWithHRMData:(NSData *)data
+{
+    const uint8_t *reportData = [data bytes];
+    uint16_t bpm = 0;
+    
+    if ((reportData[0] & 0x01) == 0)
+    {
+        /* uint8 bpm */
+        bpm = reportData[1];
+    }
+    else
+    {
+        /* uint16 bpm */
+        bpm = CFSwapInt16LittleToHost(*(uint16_t *)(&reportData[1]));
+    }
+    
+    //    NSLog(@"updateWithHRMData: %i", bpm);
+    return (int)bpm;
+}
+
+- (void)peripheral:(CBPeripheral *)peripheral didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error
+{
+    // Updated value for heart rate measurement received
+    if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:POLARH7_HRM_MEASUREMENT_CHARACTERISTIC_UUID]]) { // 1
+        // Get the Heart Rate Monitor BPM
+        NSLog(@"got characteristic.value");
+        int hrm = [self updateWithHRMData:characteristic.value];
+        NSLog(@"%@: %d", peripheral.name, hrm);
+    }
+    // Retrieve the characteristic value for manufacturer name received
+    if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:POLARH7_HRM_MANUFACTURER_NAME_CHARACTERISTIC_UUID]]) {  // 2
+        //        [self getManufacturerName:characteristic];
+    }
+    // Retrieve the characteristic value for the body sensor location received
+    else if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:POLARH7_HRM_BODY_LOCATION_CHARACTERISTIC_UUID]]) {  // 3
+        //        [self getBodyLocation:characteristic];
+    }
+    
+    // Add your constructed device information to your UITextView
+    //    self.deviceInfo.text = [NSString stringWithFormat:@"%@\n%@\n%@\n", self.connected, self.bodyData, self.manufacturer];  // 4
+}
 
 @end

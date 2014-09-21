@@ -9,6 +9,7 @@
 #import "MyPanelViewController.h"
 #import "UserInfoGatherViewController.h"
 #import "NavWalkoutViewController.h"
+#import "SettingsViewController.h"
 
 @interface MyPanelViewController () {
     float boundsHeight;
@@ -89,7 +90,7 @@
         [btn3 setTitle:@"附近" forState:UIControlStateNormal];
         [btn4 setTitle:@"预约" forState:UIControlStateNormal];
         [btn5 setTitle:@"消课" forState:UIControlStateNormal];
-        [btn6 setTitle:@"竞赛" forState:UIControlStateNormal];
+        [btn6 setTitle:@"设置" forState:UIControlStateNormal];
         [btn1 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [btn2 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [btn3 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -105,6 +106,7 @@
         
         [btn1 addTarget:self action:@selector(handleBtn1) forControlEvents:UIControlEventTouchUpInside];
         [btn2 addTarget:self action:@selector(handleBtn2) forControlEvents:UIControlEventTouchUpInside];
+        [btn6 addTarget:self action:@selector(handleBtn6) forControlEvents:UIControlEventTouchUpInside];
     }
 
     return coverView;
@@ -120,6 +122,13 @@
     NavWalkoutViewController *walkout = [[NavWalkoutViewController alloc] initWithNibName:@"NavWalkoutViewController" bundle:nil];
     walkout.navigationController.title = @"步行记录";
     [self.navigationController pushViewController:walkout animated:YES];
+    
+}
+
+- (void)handleBtn6 {
+    SettingsViewController *settings = [[SettingsViewController alloc] initWithNibName:nil bundle:nil];
+    settings.navigationController.title = @"设置";
+    [self.navigationController pushViewController:settings animated:YES];
     
 }
 

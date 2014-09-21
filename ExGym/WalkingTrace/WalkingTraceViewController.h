@@ -9,13 +9,15 @@
 #import <UIKit/UIKit.h>
 #import <MAMapKit/MAMapKit.h>
 #import <AMapSearchKit/AMapSearchAPI.h>
+#import <CoreBluetooth/CoreBluetooth.h>
 
 @class Coords;
 
-@interface WalkingTraceViewController : UIViewController <MAMapViewDelegate, UIAlertViewDelegate>
+@interface WalkingTraceViewController : UIViewController <MAMapViewDelegate, UIAlertViewDelegate, CBCentralManagerDelegate, CBPeripheralDelegate>
 
 @property (nonatomic, strong) MAMapView *mapView;
-
+@property (nonatomic, strong) CBCentralManager *manager;
+@property (nonatomic, strong) CBPeripheral *peripheral;
 
 -(void)newWalkingTrace;
 -(void)walkingReview:(Coords *)coords;
