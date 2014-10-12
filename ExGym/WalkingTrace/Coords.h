@@ -18,14 +18,19 @@
 @property (nonatomic, strong) NSMutableArray *cache_strings;
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *description;
+@property (nonatomic, assign) NSTimeInterval totalSecond;
 
 @property (nonatomic, assign) double distanceM;
 
 - (id)initWithData:(NSDictionary *)data;
+- (id)initWithUUID:(NSUUID *)uuid;
 - (NSArray *)contentsToStrings;
 - (BOOL)appendToDataFile;
+- (BOOL)saveWithUUID:(NSUUID *)uuid;
+
 
 - (void)cacheStringToContents;
+- (double)speed;
 
 - (NSMutableArray *)overlays;
 - (MAPolyline *)lastOverlay;

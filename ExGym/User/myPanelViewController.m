@@ -10,6 +10,7 @@
 #import "UserInfoGatherViewController.h"
 #import "NavWalkoutViewController.h"
 #import "SettingsViewController.h"
+#import "UIButton+UIImage.h"
 
 @interface MyPanelViewController () {
     float boundsHeight;
@@ -47,7 +48,8 @@
     // 568, 480
     
     imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, (568 - boundsHeight) / -2, 320, 420)];
-    imageView.image = [UIImage imageNamed:@"loginImage.jpg"];
+    imageView.image = [UIImage imageNamed:@"1770133_2091.jpg"];
+    imageView.contentMode = UIViewContentModeScaleAspectFill;
     [self.view addSubview:imageView];
     
     [self.view addSubview:[self makeCoverView]];
@@ -56,54 +58,52 @@
 - (UIView *)makeCoverView {
     if (coverView == nil) {
     
-        coverView = [[UIView alloc] initWithFrame:CGRectMake(0, boundsHeight - 230, 320, 230)];
-        //    coverView.backgroundColor = [UIColor purpleColor];
+        coverView = [[UIView alloc] initWithFrame:CGRectMake(0, boundsHeight - 212, 320, 212)];
         
-        UIView *userInfoView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 80)];
-        userInfoView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
+        UIView *userInfoView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 62)];
+        userInfoView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.6];
         [coverView addSubview:userInfoView];
         
-        UIView *menuView = [[UIView alloc] initWithFrame:CGRectMake(0, 80, 320, 150)];
+        UIImageView *userAvatar = [[UIImageView alloc] initWithFrame:CGRectMake(10, 5, 52, 52)];
+        userAvatar.image = [UIImage imageNamed:@"user-guest-white.png"];
+        [userInfoView addSubview:userAvatar];
+        
+        UILabel *userNameCN = [[UILabel alloc] initWithFrame:CGRectMake(70, 14, 100, 20)];
+        userNameCN.text = @"游客";
+        userNameCN.textColor = [UIColor whiteColor];
+        [userInfoView addSubview:userNameCN];
+        UILabel *userNameEN = [[UILabel alloc] initWithFrame:CGRectMake(70, 34, 100, 20)];
+        userNameEN.text = @"Guest";
+        userNameEN.font = [UIFont systemFontOfSize:14];
+        userNameEN.textColor = [UIColor whiteColor];
+        [userInfoView addSubview:userNameEN];
+        
+        UIView *menuView = [[UIView alloc] initWithFrame:CGRectMake(0, 62, 320, 150)];
         menuView.backgroundColor = [UIColor colorWithRed:37/255. green:217/255. blue:235/255. alpha:1];
         [coverView addSubview:menuView];
         
-        UIButton *btn1 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        UIButton *btn2 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        UIButton *btn3 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        UIButton *btn4 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        UIButton *btn5 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        UIButton *btn6 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        btn1.frame = CGRectMake(15, 20, 90, 50);
-        btn2.frame = CGRectMake(115, 20, 90, 50);
-        btn3.frame = CGRectMake(215, 20, 90, 50);
-        btn4.frame = CGRectMake(15, 80, 90, 50);
-        btn5.frame = CGRectMake(115, 80, 90, 50);
-        btn6.frame = CGRectMake(215, 80, 90, 50);
-        btn1.titleLabel.font = [UIFont systemFontOfSize:20];
-        btn2.titleLabel.font = [UIFont systemFontOfSize:20];
-        btn3.titleLabel.font = [UIFont systemFontOfSize:20];
-        btn4.titleLabel.font = [UIFont systemFontOfSize:20];
-        btn5.titleLabel.font = [UIFont systemFontOfSize:20];
-        btn6.titleLabel.font = [UIFont systemFontOfSize:20];
-        [btn1 setTitle:@"我的" forState:UIControlStateNormal];
-        [btn2 setTitle:@"运动" forState:UIControlStateNormal];
-        [btn3 setTitle:@"附近" forState:UIControlStateNormal];
-        [btn4 setTitle:@"预约" forState:UIControlStateNormal];
-        [btn5 setTitle:@"消课" forState:UIControlStateNormal];
-        [btn6 setTitle:@"设置" forState:UIControlStateNormal];
-        [btn1 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [btn2 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [btn3 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [btn4 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [btn5 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [btn6 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        
+        //        UIButton *btn1 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        UIButton *btn1 = [[UIButton alloc] initWithFrame:CGRectMake(15, 20, 90, 50) withTitle:@"我的"
+                                                andImage:[UIImage imageNamed:@"mypanel-comfirmUser.png"]];
+        UIButton *btn2 = [[UIButton alloc] initWithFrame:CGRectMake(115, 20, 90, 50) withTitle:@"运动"
+                                                andImage:[UIImage imageNamed:@"mypanel-sent.png"]];
+        UIButton *btn3 = [[UIButton alloc] initWithFrame:CGRectMake(215, 20, 90, 50) withTitle:@"附近"
+                                                andImage:[UIImage imageNamed:@"mypanel-location.png"]];
+        UIButton *btn4 = [[UIButton alloc] initWithFrame:CGRectMake(15, 80, 90, 50) withTitle:@"预约"
+                                                andImage:[UIImage imageNamed:@"mypanel-todos.png"]];
+        UIButton *btn5 = [[UIButton alloc] initWithFrame:CGRectMake(115, 80, 90, 50) withTitle:@"消课"
+                                                andImage:[UIImage imageNamed:@"mypanel-memo.png"]];
+        UIButton *btn6 = [[UIButton alloc] initWithFrame:CGRectMake(215, 80, 90, 50) withTitle:@"设置"
+                                                andImage:[UIImage imageNamed:@"mypanel-timer.png"]];
+
         [menuView addSubview:btn1];
         [menuView addSubview:btn2];
         [menuView addSubview:btn3];
         [menuView addSubview:btn4];
         [menuView addSubview:btn5];
         [menuView addSubview:btn6];
-        
+
         [btn1 addTarget:self action:@selector(handleBtn1) forControlEvents:UIControlEventTouchUpInside];
         [btn2 addTarget:self action:@selector(handleBtn2) forControlEvents:UIControlEventTouchUpInside];
         [btn6 addTarget:self action:@selector(handleBtn6) forControlEvents:UIControlEventTouchUpInside];
@@ -122,7 +122,6 @@
     NavWalkoutViewController *walkout = [[NavWalkoutViewController alloc] initWithNibName:@"NavWalkoutViewController" bundle:nil];
     walkout.navigationController.title = @"步行记录";
     [self.navigationController pushViewController:walkout animated:YES];
-    
 }
 
 - (void)handleBtn6 {

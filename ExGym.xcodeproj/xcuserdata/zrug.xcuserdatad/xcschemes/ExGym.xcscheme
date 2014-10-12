@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0510"
+   LastUpgradeVersion = "0600"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -37,6 +37,17 @@
                BlueprintName = "ExGymTests"
                ReferencedContainer = "container:ExGym.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "ExGymTests/testDataCoord">
+               </Test>
+               <Test
+                  Identifier = "ExGymTests/testUser">
+               </Test>
+               <Test
+                  Identifier = "ExGymTests/testWorkOut">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
       <MacroExpansion>

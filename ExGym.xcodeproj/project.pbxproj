@@ -11,6 +11,43 @@
 		68168FC719CD30BC00E12D58 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68168FC619CD30BC00E12D58 /* CoreBluetooth.framework */; };
 		68168FC919CEE03E00E12D58 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 68168FC819CEE03E00E12D58 /* User.m */; };
 		68168FCC19CF26BA00E12D58 /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 68168FCB19CF26BA00E12D58 /* AMap.bundle */; };
+		68168FD319DE74B000E12D58 /* WorkoutModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 68168FD219DE74B000E12D58 /* WorkoutModel.m */; };
+		68168FD819E1286000E12D58 /* 1770133_2091.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 68168FD719E1286000E12D58 /* 1770133_2091.jpg */; };
+		68168FDA19E129F100E12D58 /* exgymlogo_transparent.png in Resources */ = {isa = PBXBuildFile; fileRef = 68168FD919E129F100E12D58 /* exgymlogo_transparent.png */; };
+		68168FDC19E1652300E12D58 /* DINPro-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 68168FDB19E1652300E12D58 /* DINPro-Light.otf */; };
+		68168FDE19E1779000E12D58 /* DINPro-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 68168FDD19E1779000E12D58 /* DINPro-Medium.otf */; };
+		68168FE819E1784D00E12D58 /* icon-distance.png in Resources */ = {isa = PBXBuildFile; fileRef = 68168FE019E1784D00E12D58 /* icon-distance.png */; };
+		68168FE919E1784D00E12D58 /* icon-flapdown.png in Resources */ = {isa = PBXBuildFile; fileRef = 68168FE119E1784D00E12D58 /* icon-flapdown.png */; };
+		68168FEA19E1784D00E12D58 /* icon-flapup.png in Resources */ = {isa = PBXBuildFile; fileRef = 68168FE219E1784D00E12D58 /* icon-flapup.png */; };
+		68168FEB19E1784D00E12D58 /* icon-kcal.png in Resources */ = {isa = PBXBuildFile; fileRef = 68168FE319E1784D00E12D58 /* icon-kcal.png */; };
+		68168FEC19E1784D00E12D58 /* icon-pace.png in Resources */ = {isa = PBXBuildFile; fileRef = 68168FE419E1784D00E12D58 /* icon-pace.png */; };
+		68168FED19E1784D00E12D58 /* icon-speed.png in Resources */ = {isa = PBXBuildFile; fileRef = 68168FE519E1784D00E12D58 /* icon-speed.png */; };
+		68168FEE19E1784D00E12D58 /* icon-totaltime.png in Resources */ = {isa = PBXBuildFile; fileRef = 68168FE619E1784D00E12D58 /* icon-totaltime.png */; };
+		68168FF019E1867800E12D58 /* DINCond-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 68168FEF19E1867800E12D58 /* DINCond-Medium.otf */; };
+		6816900719E1A24F00E12D58 /* AbstractActionSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 68168FF719E1A24F00E12D58 /* AbstractActionSheetPicker.m */; };
+		6816900819E1A24F00E12D58 /* ActionSheetCustomPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 68168FF919E1A24F00E12D58 /* ActionSheetCustomPicker.m */; };
+		6816900919E1A24F00E12D58 /* ActionSheetDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 68168FFC19E1A24F00E12D58 /* ActionSheetDatePicker.m */; };
+		6816900A19E1A24F00E12D58 /* ActionSheetDistancePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 68168FFE19E1A24F00E12D58 /* ActionSheetDistancePicker.m */; };
+		6816900B19E1A24F00E12D58 /* ActionSheetLocalePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 6816900019E1A24F00E12D58 /* ActionSheetLocalePicker.m */; };
+		6816900C19E1A24F00E12D58 /* ActionSheetStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 6816900219E1A24F00E12D58 /* ActionSheetStringPicker.m */; };
+		6816900D19E1A24F00E12D58 /* DistancePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6816900419E1A24F00E12D58 /* DistancePickerView.m */; };
+		6816900E19E1A24F00E12D58 /* SWActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 6816900619E1A24F00E12D58 /* SWActionSheet.m */; };
+		6816901219E2789500E12D58 /* icon-bpm.png in Resources */ = {isa = PBXBuildFile; fileRef = 6816901119E2789500E12D58 /* icon-bpm.png */; };
+		6816901419E27B5F00E12D58 /* infoViewBG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6816901319E27B5F00E12D58 /* infoViewBG.jpg */; };
+		6816901919E3F97C00E12D58 /* UIButton+UIImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6816901819E3F97C00E12D58 /* UIButton+UIImage.m */; };
+		6816902019E3FD9E00E12D58 /* mypanel-comfirmUser.png in Resources */ = {isa = PBXBuildFile; fileRef = 6816901A19E3FD9E00E12D58 /* mypanel-comfirmUser.png */; };
+		6816902119E3FD9E00E12D58 /* mypanel-location.png in Resources */ = {isa = PBXBuildFile; fileRef = 6816901B19E3FD9E00E12D58 /* mypanel-location.png */; };
+		6816902219E3FD9E00E12D58 /* mypanel-memo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6816901C19E3FD9E00E12D58 /* mypanel-memo.png */; };
+		6816902319E3FD9E00E12D58 /* mypanel-sent.png in Resources */ = {isa = PBXBuildFile; fileRef = 6816901D19E3FD9E00E12D58 /* mypanel-sent.png */; };
+		6816902419E3FD9E00E12D58 /* mypanel-timer.png in Resources */ = {isa = PBXBuildFile; fileRef = 6816901E19E3FD9E00E12D58 /* mypanel-timer.png */; };
+		6816902519E3FD9E00E12D58 /* mypanel-todos.png in Resources */ = {isa = PBXBuildFile; fileRef = 6816901F19E3FD9E00E12D58 /* mypanel-todos.png */; };
+		6816902919E405B200E12D58 /* user-guest.png in Resources */ = {isa = PBXBuildFile; fileRef = 6816902619E405B200E12D58 /* user-guest.png */; };
+		6816902A19E405B200E12D58 /* user-female.png in Resources */ = {isa = PBXBuildFile; fileRef = 6816902719E405B200E12D58 /* user-female.png */; };
+		6816902B19E405B200E12D58 /* user-male.png in Resources */ = {isa = PBXBuildFile; fileRef = 6816902819E405B200E12D58 /* user-male.png */; };
+		6816902F19E417A500E12D58 /* user-guest-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 6816902C19E417A500E12D58 /* user-guest-white.png */; };
+		6816903019E417A500E12D58 /* user-female-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 6816902D19E417A500E12D58 /* user-female-white.png */; };
+		6816903119E417A500E12D58 /* user-male-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 6816902E19E417A500E12D58 /* user-male-white.png */; };
+		684C363E19E67B1C00BA11C5 /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 684C363D19E67B1C00BA11C5 /* MAMapKit.framework */; };
 		6878DB3719B163A2009FBECB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6878DB3619B163A2009FBECB /* Foundation.framework */; };
 		6878DB3919B163A2009FBECB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6878DB3819B163A2009FBECB /* CoreGraphics.framework */; };
 		6878DB3B19B163A2009FBECB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6878DB3A19B163A2009FBECB /* UIKit.framework */; };
@@ -113,7 +150,6 @@
 		689DAD4F19C4805700955A94 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 689DAD4E19C4805700955A94 /* SystemConfiguration.framework */; };
 		689DAD5119C4805F00955A94 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 689DAD5019C4805F00955A94 /* CoreTelephony.framework */; };
 		689DAD5419C4825300955A94 /* AMapSearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 689DAD5219C4825300955A94 /* AMapSearchKit.framework */; };
-		689DAD5519C4825300955A94 /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 689DAD5319C4825300955A94 /* MAMapKit.framework */; };
 		689DAD5919C4830F00955A94 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 689DAD5819C4830F00955A94 /* Security.framework */; };
 		689DAD5B19C4832200955A94 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 689DAD5A19C4832200955A94 /* CoreLocation.framework */; };
 		689DADBC19C72EA600955A94 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DADB219C72EA600955A94 /* FMDatabase.m */; };
@@ -123,6 +159,11 @@
 		689DADC019C72EA600955A94 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 689DADBB19C72EA600955A94 /* FMResultSet.m */; };
 		689DADC219C741F900955A94 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 689DADC119C741F900955A94 /* libsqlite3.dylib */; };
 		68C1C17F19BF4D240076BC63 /* UserInfoGatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C1C17E19BF4D240076BC63 /* UserInfoGatherViewController.m */; };
+		68DA89DB19E4CD6A006C1DF6 /* ExGymDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DA89DA19E4CD6A006C1DF6 /* ExGymDB.m */; };
+		68DA89DE19E4E3DB006C1DF6 /* NSDate+Detector.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DA89DD19E4E3DB006C1DF6 /* NSDate+Detector.m */; };
+		68DA89E119E519EE006C1DF6 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DA89E019E519EE006C1DF6 /* UserModel.m */; };
+		68DA89E419E5383C006C1DF6 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DA89E319E5383C006C1DF6 /* NSString+MD5.m */; };
+		68ECAE1319E9181F00758723 /* HeartRates.m in Sources */ = {isa = PBXBuildFile; fileRef = 68ECAE1219E9181F00758723 /* HeartRates.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +183,56 @@
 		68168FC819CEE03E00E12D58 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = User/User.m; sourceTree = "<group>"; };
 		68168FCA19CEE05000E12D58 /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = User.h; path = User/User.h; sourceTree = "<group>"; };
 		68168FCB19CF26BA00E12D58 /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AMap.bundle; sourceTree = "<group>"; };
+		68168FD119DE74B000E12D58 /* WorkoutModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WorkoutModel.h; path = Model/WorkoutModel.h; sourceTree = "<group>"; };
+		68168FD219DE74B000E12D58 /* WorkoutModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WorkoutModel.m; path = Model/WorkoutModel.m; sourceTree = "<group>"; };
+		68168FD719E1286000E12D58 /* 1770133_2091.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 1770133_2091.jpg; path = images/1770133_2091.jpg; sourceTree = "<group>"; };
+		68168FD919E129F100E12D58 /* exgymlogo_transparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = exgymlogo_transparent.png; path = images/exgymlogo_transparent.png; sourceTree = "<group>"; };
+		68168FDB19E1652300E12D58 /* DINPro-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Light.otf"; sourceTree = "<group>"; };
+		68168FDD19E1779000E12D58 /* DINPro-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Medium.otf"; sourceTree = "<group>"; };
+		68168FE019E1784D00E12D58 /* icon-distance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-distance.png"; path = "images/icon-distance.png"; sourceTree = "<group>"; };
+		68168FE119E1784D00E12D58 /* icon-flapdown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-flapdown.png"; path = "images/icon-flapdown.png"; sourceTree = "<group>"; };
+		68168FE219E1784D00E12D58 /* icon-flapup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-flapup.png"; path = "images/icon-flapup.png"; sourceTree = "<group>"; };
+		68168FE319E1784D00E12D58 /* icon-kcal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-kcal.png"; path = "images/icon-kcal.png"; sourceTree = "<group>"; };
+		68168FE419E1784D00E12D58 /* icon-pace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-pace.png"; path = "images/icon-pace.png"; sourceTree = "<group>"; };
+		68168FE519E1784D00E12D58 /* icon-speed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-speed.png"; path = "images/icon-speed.png"; sourceTree = "<group>"; };
+		68168FE619E1784D00E12D58 /* icon-totaltime.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-totaltime.png"; path = "images/icon-totaltime.png"; sourceTree = "<group>"; };
+		68168FEF19E1867800E12D58 /* DINCond-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINCond-Medium.otf"; sourceTree = "<group>"; };
+		68168FF619E1A24F00E12D58 /* AbstractActionSheetPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractActionSheetPicker.h; sourceTree = "<group>"; };
+		68168FF719E1A24F00E12D58 /* AbstractActionSheetPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractActionSheetPicker.m; sourceTree = "<group>"; };
+		68168FF819E1A24F00E12D58 /* ActionSheetCustomPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetCustomPicker.h; sourceTree = "<group>"; };
+		68168FF919E1A24F00E12D58 /* ActionSheetCustomPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetCustomPicker.m; sourceTree = "<group>"; };
+		68168FFA19E1A24F00E12D58 /* ActionSheetCustomPickerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetCustomPickerDelegate.h; sourceTree = "<group>"; };
+		68168FFB19E1A24F00E12D58 /* ActionSheetDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetDatePicker.h; sourceTree = "<group>"; };
+		68168FFC19E1A24F00E12D58 /* ActionSheetDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetDatePicker.m; sourceTree = "<group>"; };
+		68168FFD19E1A24F00E12D58 /* ActionSheetDistancePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetDistancePicker.h; sourceTree = "<group>"; };
+		68168FFE19E1A24F00E12D58 /* ActionSheetDistancePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetDistancePicker.m; sourceTree = "<group>"; };
+		68168FFF19E1A24F00E12D58 /* ActionSheetLocalePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetLocalePicker.h; sourceTree = "<group>"; };
+		6816900019E1A24F00E12D58 /* ActionSheetLocalePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetLocalePicker.m; sourceTree = "<group>"; };
+		6816900119E1A24F00E12D58 /* ActionSheetStringPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetStringPicker.h; sourceTree = "<group>"; };
+		6816900219E1A24F00E12D58 /* ActionSheetStringPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetStringPicker.m; sourceTree = "<group>"; };
+		6816900319E1A24F00E12D58 /* DistancePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistancePickerView.h; sourceTree = "<group>"; };
+		6816900419E1A24F00E12D58 /* DistancePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistancePickerView.m; sourceTree = "<group>"; };
+		6816900519E1A24F00E12D58 /* SWActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWActionSheet.h; sourceTree = "<group>"; };
+		6816900619E1A24F00E12D58 /* SWActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWActionSheet.m; sourceTree = "<group>"; };
+		6816900F19E1A29100E12D58 /* ActionSheetPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetPicker.h; sourceTree = "<group>"; };
+		6816901019E1A29100E12D58 /* CoreActionSheetPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreActionSheetPicker.h; sourceTree = "<group>"; };
+		6816901119E2789500E12D58 /* icon-bpm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-bpm.png"; path = "images/icon-bpm.png"; sourceTree = "<group>"; };
+		6816901319E27B5F00E12D58 /* infoViewBG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = infoViewBG.jpg; path = images/infoViewBG.jpg; sourceTree = "<group>"; };
+		6816901719E3F97C00E12D58 /* UIButton+UIImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIButton+UIImage.h"; path = "lib/UIButton+UIImage.h"; sourceTree = "<group>"; };
+		6816901819E3F97C00E12D58 /* UIButton+UIImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+UIImage.m"; path = "lib/UIButton+UIImage.m"; sourceTree = "<group>"; };
+		6816901A19E3FD9E00E12D58 /* mypanel-comfirmUser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mypanel-comfirmUser.png"; path = "images/mypanel-comfirmUser.png"; sourceTree = "<group>"; };
+		6816901B19E3FD9E00E12D58 /* mypanel-location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mypanel-location.png"; path = "images/mypanel-location.png"; sourceTree = "<group>"; };
+		6816901C19E3FD9E00E12D58 /* mypanel-memo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mypanel-memo.png"; path = "images/mypanel-memo.png"; sourceTree = "<group>"; };
+		6816901D19E3FD9E00E12D58 /* mypanel-sent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mypanel-sent.png"; path = "images/mypanel-sent.png"; sourceTree = "<group>"; };
+		6816901E19E3FD9E00E12D58 /* mypanel-timer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mypanel-timer.png"; path = "images/mypanel-timer.png"; sourceTree = "<group>"; };
+		6816901F19E3FD9E00E12D58 /* mypanel-todos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mypanel-todos.png"; path = "images/mypanel-todos.png"; sourceTree = "<group>"; };
+		6816902619E405B200E12D58 /* user-guest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "user-guest.png"; path = "images/user-guest.png"; sourceTree = "<group>"; };
+		6816902719E405B200E12D58 /* user-female.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "user-female.png"; path = "images/user-female.png"; sourceTree = "<group>"; };
+		6816902819E405B200E12D58 /* user-male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "user-male.png"; path = "images/user-male.png"; sourceTree = "<group>"; };
+		6816902C19E417A500E12D58 /* user-guest-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "user-guest-white.png"; path = "images/user-guest-white.png"; sourceTree = "<group>"; };
+		6816902D19E417A500E12D58 /* user-female-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "user-female-white.png"; path = "images/user-female-white.png"; sourceTree = "<group>"; };
+		6816902E19E417A500E12D58 /* user-male-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "user-male-white.png"; path = "images/user-male-white.png"; sourceTree = "<group>"; };
+		684C363D19E67B1C00BA11C5 /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MAMapKit.framework; sourceTree = "<group>"; };
 		6878DB3319B163A2009FBECB /* ExGym.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExGym.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6878DB3619B163A2009FBECB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6878DB3819B163A2009FBECB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -333,6 +424,16 @@
 		689DADC119C741F900955A94 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		68C1C17D19BF4D240076BC63 /* UserInfoGatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserInfoGatherViewController.h; path = User/UserInfoGatherViewController.h; sourceTree = "<group>"; };
 		68C1C17E19BF4D240076BC63 /* UserInfoGatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserInfoGatherViewController.m; path = User/UserInfoGatherViewController.m; sourceTree = "<group>"; };
+		68DA89D919E4CD6A006C1DF6 /* ExGymDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExGymDB.h; path = Model/ExGymDB.h; sourceTree = "<group>"; };
+		68DA89DA19E4CD6A006C1DF6 /* ExGymDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExGymDB.m; path = Model/ExGymDB.m; sourceTree = "<group>"; };
+		68DA89DC19E4E3DB006C1DF6 /* NSDate+Detector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Detector.h"; sourceTree = "<group>"; };
+		68DA89DD19E4E3DB006C1DF6 /* NSDate+Detector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Detector.m"; sourceTree = "<group>"; };
+		68DA89DF19E519EE006C1DF6 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserModel.h; path = Model/UserModel.h; sourceTree = "<group>"; };
+		68DA89E019E519EE006C1DF6 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserModel.m; path = Model/UserModel.m; sourceTree = "<group>"; };
+		68DA89E219E5383C006C1DF6 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		68DA89E319E5383C006C1DF6 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		68ECAE1119E9181F00758723 /* HeartRates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HeartRates.h; path = Model/HeartRates.h; sourceTree = "<group>"; };
+		68ECAE1219E9181F00758723 /* HeartRates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HeartRates.m; path = Model/HeartRates.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -342,13 +443,13 @@
 			files = (
 				68168FC719CD30BC00E12D58 /* CoreBluetooth.framework in Frameworks */,
 				689DADC219C741F900955A94 /* libsqlite3.dylib in Frameworks */,
+				684C363E19E67B1C00BA11C5 /* MAMapKit.framework in Frameworks */,
 				689DAD5B19C4832200955A94 /* CoreLocation.framework in Frameworks */,
 				689DAD5919C4830F00955A94 /* Security.framework in Frameworks */,
 				689DAD5119C4805F00955A94 /* CoreTelephony.framework in Frameworks */,
 				689DAD4F19C4805700955A94 /* SystemConfiguration.framework in Frameworks */,
 				689DAD4D19C4804D00955A94 /* libstdc++.6.0.9.dylib in Frameworks */,
 				689DAD4B19C4804400955A94 /* libz.dylib in Frameworks */,
-				689DAD5519C4825300955A94 /* MAMapKit.framework in Frameworks */,
 				689DAD4919C4803C00955A94 /* QuartzCore.framework in Frameworks */,
 				689DAD5419C4825300955A94 /* AMapSearchKit.framework in Frameworks */,
 				6878DB3919B163A2009FBECB /* CoreGraphics.framework in Frameworks */,
@@ -379,6 +480,47 @@
 			name = Settings;
 			sourceTree = "<group>";
 		};
+		68168FCD19DE73EF00E12D58 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				68DA89DF19E519EE006C1DF6 /* UserModel.h */,
+				68DA89E019E519EE006C1DF6 /* UserModel.m */,
+				68168FD119DE74B000E12D58 /* WorkoutModel.h */,
+				68168FD219DE74B000E12D58 /* WorkoutModel.m */,
+				68DA89D919E4CD6A006C1DF6 /* ExGymDB.h */,
+				68DA89DA19E4CD6A006C1DF6 /* ExGymDB.m */,
+				68ECAE1119E9181F00758723 /* HeartRates.h */,
+				68ECAE1219E9181F00758723 /* HeartRates.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		68168FF519E1A24F00E12D58 /* Pickers */ = {
+			isa = PBXGroup;
+			children = (
+				6816900F19E1A29100E12D58 /* ActionSheetPicker.h */,
+				6816901019E1A29100E12D58 /* CoreActionSheetPicker.h */,
+				68168FF619E1A24F00E12D58 /* AbstractActionSheetPicker.h */,
+				68168FF719E1A24F00E12D58 /* AbstractActionSheetPicker.m */,
+				68168FF819E1A24F00E12D58 /* ActionSheetCustomPicker.h */,
+				68168FF919E1A24F00E12D58 /* ActionSheetCustomPicker.m */,
+				68168FFA19E1A24F00E12D58 /* ActionSheetCustomPickerDelegate.h */,
+				68168FFB19E1A24F00E12D58 /* ActionSheetDatePicker.h */,
+				68168FFC19E1A24F00E12D58 /* ActionSheetDatePicker.m */,
+				68168FFD19E1A24F00E12D58 /* ActionSheetDistancePicker.h */,
+				68168FFE19E1A24F00E12D58 /* ActionSheetDistancePicker.m */,
+				68168FFF19E1A24F00E12D58 /* ActionSheetLocalePicker.h */,
+				6816900019E1A24F00E12D58 /* ActionSheetLocalePicker.m */,
+				6816900119E1A24F00E12D58 /* ActionSheetStringPicker.h */,
+				6816900219E1A24F00E12D58 /* ActionSheetStringPicker.m */,
+				6816900319E1A24F00E12D58 /* DistancePickerView.h */,
+				6816900419E1A24F00E12D58 /* DistancePickerView.m */,
+				6816900519E1A24F00E12D58 /* SWActionSheet.h */,
+				6816900619E1A24F00E12D58 /* SWActionSheet.m */,
+			);
+			path = Pickers;
+			sourceTree = "<group>";
+		};
 		6878DB2A19B163A2009FBECB = {
 			isa = PBXGroup;
 			children = (
@@ -401,6 +543,7 @@
 		6878DB3519B163A2009FBECB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				684C363D19E67B1C00BA11C5 /* MAMapKit.framework */,
 				68168FC619CD30BC00E12D58 /* CoreBluetooth.framework */,
 				689DADC119C741F900955A94 /* libsqlite3.dylib */,
 				689DAD5A19C4832200955A94 /* CoreLocation.framework */,
@@ -423,17 +566,21 @@
 		6878DB3C19B163A2009FBECB /* ExGym */ = {
 			isa = PBXGroup;
 			children = (
+				68168FF519E1A24F00E12D58 /* Pickers */,
 				689DADB019C72EA600955A94 /* fmdb */,
 				689DAC4D19C47DEC00955A94 /* walkingTrace */,
 				6878DB6F19B16C48009FBECB /* images */,
 				6878DB4519B163A2009FBECB /* AppDelegate.h */,
 				6878DB4619B163A2009FBECB /* AppDelegate.m */,
+				68168FCD19DE73EF00E12D58 /* Model */,
 				6878DB6B19B164A6009FBECB /* Login */,
 				68C1C17C19BF4CF60076BC63 /* User */,
 				689DAC4319C1EFBD00955A94 /* Schedule */,
 				6878DB4E19B163A2009FBECB /* Images.xcassets */,
 				6878DB3D19B163A2009FBECB /* Supporting Files */,
 				68168FC519CD210000E12D58 /* Settings */,
+				6816901719E3F97C00E12D58 /* UIButton+UIImage.h */,
+				6816901819E3F97C00E12D58 /* UIButton+UIImage.m */,
 			);
 			path = ExGym;
 			sourceTree = "<group>";
@@ -446,6 +593,9 @@
 				6878DB3F19B163A2009FBECB /* InfoPlist.strings */,
 				6878DB4219B163A2009FBECB /* main.m */,
 				6878DB4419B163A2009FBECB /* ExGym-Prefix.pch */,
+				68168FDB19E1652300E12D58 /* DINPro-Light.otf */,
+				68168FDD19E1779000E12D58 /* DINPro-Medium.otf */,
+				68168FEF19E1867800E12D58 /* DINCond-Medium.otf */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -480,7 +630,30 @@
 		6878DB6F19B16C48009FBECB /* images */ = {
 			isa = PBXGroup;
 			children = (
+				6816901319E27B5F00E12D58 /* infoViewBG.jpg */,
+				68168FD719E1286000E12D58 /* 1770133_2091.jpg */,
 				6878DB7019B16C59009FBECB /* loginImage.jpg */,
+				68168FD919E129F100E12D58 /* exgymlogo_transparent.png */,
+				6816901A19E3FD9E00E12D58 /* mypanel-comfirmUser.png */,
+				6816901B19E3FD9E00E12D58 /* mypanel-location.png */,
+				6816901C19E3FD9E00E12D58 /* mypanel-memo.png */,
+				6816901D19E3FD9E00E12D58 /* mypanel-sent.png */,
+				6816901E19E3FD9E00E12D58 /* mypanel-timer.png */,
+				6816901F19E3FD9E00E12D58 /* mypanel-todos.png */,
+				6816901119E2789500E12D58 /* icon-bpm.png */,
+				68168FE019E1784D00E12D58 /* icon-distance.png */,
+				68168FE119E1784D00E12D58 /* icon-flapdown.png */,
+				68168FE219E1784D00E12D58 /* icon-flapup.png */,
+				68168FE319E1784D00E12D58 /* icon-kcal.png */,
+				68168FE419E1784D00E12D58 /* icon-pace.png */,
+				68168FE519E1784D00E12D58 /* icon-speed.png */,
+				68168FE619E1784D00E12D58 /* icon-totaltime.png */,
+				6816902619E405B200E12D58 /* user-guest.png */,
+				6816902719E405B200E12D58 /* user-female.png */,
+				6816902819E405B200E12D58 /* user-male.png */,
+				6816902C19E417A500E12D58 /* user-guest-white.png */,
+				6816902D19E417A500E12D58 /* user-female-white.png */,
+				6816902E19E417A500E12D58 /* user-male-white.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -767,6 +940,10 @@
 			children = (
 				689DACF219C47E7100955A94 /* CommonUtility.h */,
 				689DACF319C47E7100955A94 /* CommonUtility.m */,
+				68DA89DC19E4E3DB006C1DF6 /* NSDate+Detector.h */,
+				68DA89DD19E4E3DB006C1DF6 /* NSDate+Detector.m */,
+				68DA89E219E5383C006C1DF6 /* NSString+MD5.h */,
+				68DA89E319E5383C006C1DF6 /* NSString+MD5.m */,
 			);
 			name = Utility;
 			path = WalkingTrace/Utility;
@@ -847,7 +1024,7 @@
 		6878DB2B19B163A2009FBECB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = com.exgym;
 				TargetAttributes = {
 					6878DB3219B163A2009FBECB = {
@@ -889,24 +1066,50 @@
 			files = (
 				689DAD4619C47E7100955A94 /* NavWalkoutViewController.xib in Resources */,
 				689DAD3219C47E7100955A94 /* animatedTrain_1.png in Resources */,
+				6816901219E2789500E12D58 /* icon-bpm.png in Resources */,
+				68168FDC19E1652300E12D58 /* DINPro-Light.otf in Resources */,
 				6878DB4F19B163A2009FBECB /* Images.xcassets in Resources */,
+				6816902219E3FD9E00E12D58 /* mypanel-memo.png in Resources */,
+				68168FEA19E1784D00E12D58 /* icon-flapup.png in Resources */,
 				689DAD2B19C47E7100955A94 /* InfoPlist.strings in Resources */,
+				68168FED19E1784D00E12D58 /* icon-speed.png in Resources */,
 				689DAD3119C47E7100955A94 /* animatedCar_4.png in Resources */,
+				68168FF019E1867800E12D58 /* DINCond-Medium.otf in Resources */,
+				68168FEC19E1784D00E12D58 /* icon-pace.png in Resources */,
 				689DAD3619C47E7100955A94 /* endPoint.png in Resources */,
+				68168FE919E1784D00E12D58 /* icon-flapdown.png in Resources */,
+				68168FE819E1784D00E12D58 /* icon-distance.png in Resources */,
+				6816901419E27B5F00E12D58 /* infoViewBG.jpg in Resources */,
 				689DAD3419C47E7100955A94 /* animatedTrain_3.png in Resources */,
 				6878DB7119B16C59009FBECB /* loginImage.jpg in Resources */,
+				68168FEE19E1784D00E12D58 /* icon-totaltime.png in Resources */,
+				6816902B19E405B200E12D58 /* user-male.png in Resources */,
+				6816902F19E417A500E12D58 /* user-guest-white.png in Resources */,
 				689DAD2E19C47E7100955A94 /* animatedCar_1.png in Resources */,
+				68168FDE19E1779000E12D58 /* DINPro-Medium.otf in Resources */,
 				689DACFA19C47E7100955A94 /* WalkingTraceViewController.xib in Resources */,
 				68168FCC19CF26BA00E12D58 /* AMap.bundle in Resources */,
 				689DAD3319C47E7100955A94 /* animatedTrain_2.png in Resources */,
+				6816902019E3FD9E00E12D58 /* mypanel-comfirmUser.png in Resources */,
+				68168FDA19E129F100E12D58 /* exgymlogo_transparent.png in Resources */,
 				689DAD3519C47E7100955A94 /* animatedTrain_4.png in Resources */,
 				689DAD3819C47E7100955A94 /* hema.png in Resources */,
+				6816902419E3FD9E00E12D58 /* mypanel-timer.png in Resources */,
+				6816902919E405B200E12D58 /* user-guest.png in Resources */,
+				68168FEB19E1784D00E12D58 /* icon-kcal.png in Resources */,
 				689DAD3019C47E7100955A94 /* animatedCar_3.png in Resources */,
 				689DAD3719C47E7100955A94 /* endPoint@2x.png in Resources */,
+				6816902519E3FD9E00E12D58 /* mypanel-todos.png in Resources */,
 				689DAD3A19C47E7100955A94 /* startPoint@2x.png in Resources */,
 				689DAD3919C47E7100955A94 /* startPoint.png in Resources */,
 				689DAD2F19C47E7100955A94 /* animatedCar_2.png in Resources */,
+				6816902A19E405B200E12D58 /* user-female.png in Resources */,
+				68168FD819E1286000E12D58 /* 1770133_2091.jpg in Resources */,
+				6816903119E417A500E12D58 /* user-male-white.png in Resources */,
+				6816903019E417A500E12D58 /* user-female-white.png in Resources */,
 				6878DB4119B163A2009FBECB /* InfoPlist.strings in Resources */,
+				6816902319E3FD9E00E12D58 /* mypanel-sent.png in Resources */,
+				6816902119E3FD9E00E12D58 /* mypanel-location.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -933,21 +1136,27 @@
 				689DADBE19C72EA600955A94 /* FMDatabasePool.m in Sources */,
 				689DAD2419C47E7100955A94 /* ScenicDeepViewController.m in Sources */,
 				689DAD1619C47E7100955A94 /* DeepContentViewController.m in Sources */,
+				6816900819E1A24F00E12D58 /* ActionSheetCustomPicker.m in Sources */,
 				689DAD0F19C47E7100955A94 /* NavigationViewController.m in Sources */,
 				689DAD1F19C47E7100955A94 /* RichContentViewController.m in Sources */,
 				689DAD0219C47E7100955A94 /* CustomOverlayViewController.m in Sources */,
 				68168FC419CD20F000E12D58 /* SettingsViewController.m in Sources */,
 				689DAD4019C47E7100955A94 /* FaceOverlay.m in Sources */,
+				68ECAE1319E9181F00758723 /* HeartRates.m in Sources */,
 				689DAD0519C47E7100955A94 /* MapTypeViewController.m in Sources */,
 				689DAD1419C47E7100955A94 /* BusStopDetailViewController.m in Sources */,
+				6816900D19E1A24F00E12D58 /* DistancePickerView.m in Sources */,
 				689DACFE19C47E7100955A94 /* AddGestureViewController.m in Sources */,
 				689DAD0C19C47E7100955A94 /* BusStopViewController.m in Sources */,
 				689DAD4219C47E7100955A94 /* GeocodeAnnotation.m in Sources */,
+				68DA89E419E5383C006C1DF6 /* NSString+MD5.m in Sources */,
 				689DAD1719C47E7100955A94 /* DiningDeepViewController.m in Sources */,
 				689DAD0619C47E7100955A94 /* OverlayViewController.m in Sources */,
 				689DAD2019C47E7100955A94 /* RoadDetailViewController.m in Sources */,
 				689DAD2919C47E7100955A94 /* TransitDetailViewController.m in Sources */,
 				689DAD3E19C47E7100955A94 /* CustomAnnotationView.m in Sources */,
+				6816900A19E1A24F00E12D58 /* ActionSheetDistancePicker.m in Sources */,
+				68DA89E119E519EE006C1DF6 /* UserModel.m in Sources */,
 				689DAD0019C47E7100955A94 /* AnnotationViewController.m in Sources */,
 				689DAD3D19C47E7100955A94 /* BusStopAnnotation.m in Sources */,
 				689DADBD19C72EA600955A94 /* FMDatabaseAdditions.m in Sources */,
@@ -955,6 +1164,9 @@
 				6878DB6E19B164F7009FBECB /* LoginViewController.m in Sources */,
 				689DAD4319C47E7100955A94 /* LineDashPolyline.m in Sources */,
 				689DAD1519C47E7100955A94 /* CinemaDeepViewController.m in Sources */,
+				6816900B19E1A24F00E12D58 /* ActionSheetLocalePicker.m in Sources */,
+				6816901919E3F97C00E12D58 /* UIButton+UIImage.m in Sources */,
+				6816900719E1A24F00E12D58 /* AbstractActionSheetPicker.m in Sources */,
 				689DAD3F19C47E7100955A94 /* CustomCalloutView.m in Sources */,
 				689DACF719C47E7100955A94 /* NavWalkoutViewController.m in Sources */,
 				689DAD0319C47E7100955A94 /* GeodesicViewController.m in Sources */,
@@ -975,6 +1187,8 @@
 				689DAD4119C47E7100955A94 /* FaceOverlayView.m in Sources */,
 				6878DB4319B163A2009FBECB /* main.m in Sources */,
 				689DAD2319C47E7100955A94 /* RouteDetailViewController.m in Sources */,
+				6816900919E1A24F00E12D58 /* ActionSheetDatePicker.m in Sources */,
+				6816900C19E1A24F00E12D58 /* ActionSheetStringPicker.m in Sources */,
 				68168FC919CEE03E00E12D58 /* User.m in Sources */,
 				689DADBF19C72EA600955A94 /* FMDatabaseQueue.m in Sources */,
 				689DAD0119C47E7100955A94 /* CustomAnnotationViewController.m in Sources */,
@@ -985,15 +1199,19 @@
 				689DAD0A19C47E7100955A94 /* ScreenshotDetailViewController.m in Sources */,
 				689DAD1819C47E7100955A94 /* GeoDetailViewController.m in Sources */,
 				689DAD2A19C47E7100955A94 /* WalkingDetailViewController.m in Sources */,
+				68DA89DB19E4CD6A006C1DF6 /* ExGymDB.m in Sources */,
+				6816900E19E1A24F00E12D58 /* SWActionSheet.m in Sources */,
 				689DAD2719C47E7100955A94 /* StreetNumberDetailViewController.m in Sources */,
 				689DAD2619C47E7100955A94 /* StepDetailViewController.m in Sources */,
 				689DACF819C47E7100955A94 /* WalkingTraceViewController.m in Sources */,
 				689DAC4C19C471A800955A94 /* MyPanelViewController.m in Sources */,
 				689DAD0B19C47E7100955A94 /* BusLineViewController.m in Sources */,
 				689DACFD19C47E7100955A94 /* MainViewController.m in Sources */,
+				68DA89DE19E4E3DB006C1DF6 /* NSDate+Detector.m in Sources */,
 				689DAD3B19C47E7100955A94 /* AnimatedAnnotation.m in Sources */,
 				689DAD0819C47E7100955A94 /* TrafficViewController.m in Sources */,
 				689DAD4719C47E7100955A94 /* CommonUtility.m in Sources */,
+				68168FD319DE74B000E12D58 /* WorkoutModel.m in Sources */,
 				689DAD1019C47E7100955A94 /* PoiViewController.m in Sources */,
 				689DAD1E19C47E7100955A94 /* PoiDetailViewController.m in Sources */,
 				689DADC019C72EA600955A94 /* FMResultSet.m in Sources */,
@@ -1124,7 +1342,6 @@
 		6878DB6619B163A2009FBECB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = NO;
@@ -1133,6 +1350,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ExGym/WalkingTrace/Extern",
 					"$(PROJECT_DIR)/ExGym/Extern",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ExGym/ExGym-Prefix.pch";
@@ -1148,7 +1366,6 @@
 		6878DB6719B163A2009FBECB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = NO;
@@ -1158,6 +1375,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ExGym/WalkingTrace/Extern",
 					"$(PROJECT_DIR)/ExGym/Extern",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ExGym/ExGym-Prefix.pch";
@@ -1179,6 +1397,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(PROJECT_DIR)/ExGym/Extern",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ExGym/ExGym-Prefix.pch";
@@ -1201,6 +1420,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(PROJECT_DIR)/ExGym/Extern",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ExGym/ExGym-Prefix.pch";

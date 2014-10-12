@@ -22,10 +22,13 @@
 - (void)setCoordinateWithLat:(CLLocationDegrees)latitude andLong:(CLLocationDegrees)longitude;
 
 - (NSString *)toString;
-- (id)initWithString:(NSString *)location;
+- (id)initWithLat:(CLLocationDegrees)latitude andLng:(CLLocationDegrees)longtitude andTime:(NSDate *)time;
+- (void)setLat:(CLLocationDegrees)latitude andLng:(CLLocationDegrees)longtitude andTime:(NSDate *)time;
 
 - (void)setSpeedFromPrev:(double)speed;
 
+
+- (id)initWithString:(NSString *)location;
 
 @end
 

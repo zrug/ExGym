@@ -10,7 +10,9 @@
 #import "LoginViewController.h"
 #import "APIKey.h"
 #import <MAMapKit/MAMapKit.h>
-#import "FMDB.h"
+#import "ExGymDB.h"
+#import "WalkingTraceViewController.h"
+
 
 @implementation AppDelegate
 
@@ -35,40 +37,24 @@
     self.window.backgroundColor = [UIColor whiteColor];
 
     [self configureAPIKey];
-    [self makeDatabase];
+
+    WalkingTraceViewController *wtvc = [[WalkingTraceViewController alloc] initWithNibName:@"WalkingTraceViewController" bundle:nil];
+    [wtvc prepareTrace];
     
-    LoginViewController *loginViewController = [[LoginViewController alloc] init];
-    navigationController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
-    navigationController.navigationBar.barTintColor = [UIColor colorWithRed:37/255. green:217/255. blue:235/255. alpha:1];
-    navigationController.navigationBar.tintColor = [UIColor whiteColor];
+//    LoginViewController *loginViewController = [[LoginViewController alloc] init];
+//    navigationController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
+//    navigationController.navigationBar.barTintColor = [UIColor colorWithRed:37/255. green:217/255. blue:235/255. alpha:1];
+//    navigationController.navigationBar.tintColor = [UIColor whiteColor];
+//
+//    self.window.rootViewController = navigationController;
 
-    self.window.rootViewController = navigationController;
-
+    UIViewController *dummyVC = [[UIViewController alloc] init];
+    self.window.rootViewController = dummyVC;
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
 
-- (void)makeDatabase {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *writableDBPath = [documentsDirectory stringByAppendingPathComponent:@"exgym.sqlite"];
-    
-    NSLog(@"db spec: %@", writableDBPath);
-    FMDatabase* db = [FMDatabase databaseWithPath:writableDBPath];
-    [db open];
-    
-    NSString* create_table_workout = @"CREATE TABLE IF NOT EXISTS \"workout\" (\"guid\" VARCHAR(36) PRIMARY KEY  NOT NULL  UNIQUE , \"type\" TEXT NOT NULL , \"distance\" REAL NOT NULL  DEFAULT 0, \"duration\" REAL NOT NULL  DEFAULT 0, \"kcal\" REAL NOT NULL  DEFAULT 0, \"pace\" INTEGER NOT NULL  DEFAULT 0, \"avgspeed\" REAL NOT NULL  DEFAULT 0, \"topspeed\" REAL NOT NULL  DEFAULT 0, \"avgheartrate\" INTEGER NOT NULL  DEFAULT 0, \"topheartrate\" INTEGER NOT NULL  DEFAULT 0, \"mood\" TEXT, \"temperature\" INTEGER, \"weather\" TEXT, \"remarks\" TEXT, \"createddate\" TEXT NOT NULL  DEFAULT CURRENT_DATE, \"createdtime\" TEXT DEFAULT CURRENT_TIME)";
-    [db executeUpdate:create_table_workout];
-    
-    NSString *create_table_heartrate = @"CREATE TABLE IF NOT EXISTS \"heartrate\" (\"workoutid\" VARCHAR(36) NOT NULL , \"rate\" INTEGER NOT NULL  DEFAULT 0, \"time\" INTEGER NOT NULL )";
-    [db executeUpdate:create_table_heartrate];
-    
-    NSString *create_table_coord = @"CREATE TABLE IF NOT EXISTS \"coord\" (\"workoutid\" VARCHAR(36) NOT NULL , \"latitude\" REAL NOT NULL  DEFAULT 0, \"longitude\" REAL NOT NULL  DEFAULT 0, \"altitude\" REAL NOT NULL  DEFAULT 0, \"speed\" REAL NOT NULL  DEFAULT 0, \"time\" INTEGER NOT NULL )";
-    [db executeUpdate:create_table_coord];
-    
-    [db close];
-}
-							
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

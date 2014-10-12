@@ -211,8 +211,8 @@
     }
     else if ([central state] == CBCentralManagerStatePoweredOn) {
         NSLog(@"蓝牙已准备就绪");
-        [self scanClick];
         [self updateLog:@"已准备就绪"];
+        [self scanClick];
     }
     else if ([central state] == CBCentralManagerStateUnauthorized) {
         NSLog(@"蓝牙状态无法认证");
@@ -314,20 +314,31 @@
 /*
  Update UI with heart rate data received from device
  */
+
 - (int) updateWithHRMData:(NSData *)data
 {
     const uint8_t *reportData = [data bytes];
     uint16_t bpm = 0;
-    
-    if ((reportData[0] & 0x01) == 0)
-    {
-        /* uint8 bpm */
-        bpm = reportData[1];
+    @try {
+        if ((reportData[0] & 0x01) == 0)
+        {
+            NSLog(@"uint8 bpm %@", data);
+            /* uint8 bpm */
+            bpm = reportData[1];
+        }
+        else
+        {
+            NSLog(@"uint16 bpm %@", data);
+            /* uint16 bpm */
+            bpm = CFSwapInt16LittleToHost(*(uint16_t *)(&reportData[1]));
+        }
+
     }
-    else
-    {
-        /* uint16 bpm */
-        bpm = CFSwapInt16LittleToHost(*(uint16_t *)(&reportData[1]));
+    @catch (NSException *exception) {
+        NSLog(@"ERROR: convert updateWithHRMData data to uint failed");
+    }
+    @finally {
+        
     }
     
     //    NSLog(@"updateWithHRMData: %i", bpm);

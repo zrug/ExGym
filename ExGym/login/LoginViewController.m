@@ -49,7 +49,8 @@
     // 568, 480
     
     imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, (568 - boundsHeight) / -2, 320, 420)];
-    imageView.image = [UIImage imageNamed:@"loginImage.jpg"];
+    imageView.image = [UIImage imageNamed:@"1770133_2091.jpg"];
+    imageView.contentMode = UIViewContentModeScaleAspectFill;
     [self.view addSubview:imageView];
 
     [self.view addSubview:[self makeFieldView]];
@@ -73,18 +74,21 @@
 
 - (UIView *)makeCoverView {
     if (coverView == nil) {
-        coverView = [[UIView alloc] initWithFrame:CGRectMake(0, boundsHeight - 230, 320, 230)];
-        //    coverView.backgroundColor = [UIColor purpleColor];
+        coverView = [[UIView alloc] initWithFrame:CGRectMake(0, boundsHeight - 212, 320, 212)];
 
-        UIView *logoView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 80)];
-        logoView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
+        UIView *logoView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 62)];
+        logoView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.6];
         [coverView addSubview:logoView];
 
-        UIView *calendarView = [[UIView alloc] initWithFrame:CGRectMake(0, 80, 320, 150)];
+        UIImageView *logoImage = [[UIImageView alloc] initWithFrame:CGRectMake(10, 13, 146, 42)];
+        logoImage.image = [UIImage imageNamed:@"exgymlogo_transparent.png"];
+        [coverView addSubview:logoImage];
+        
+        UIView *calendarView = [[UIView alloc] initWithFrame:CGRectMake(0, 62, 320, 150)];
         calendarView.backgroundColor = [UIColor colorWithRed:37/255. green:217/255. blue:235/255. alpha:1];
         [coverView addSubview:calendarView];
 
-        UILabel *sloganEn = [[UILabel alloc] initWithFrame:CGRectMake(160, 30, 150, 20)];
+        UILabel *sloganEn = [[UILabel alloc] initWithFrame:CGRectMake(160, 20, 150, 20)];
         sloganEn.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0];
         sloganEn.text = @"Leisurely life, exGym!";
         sloganEn.textColor = [UIColor whiteColor];
@@ -92,7 +96,7 @@
         sloganEn.textAlignment = NSTextAlignmentRight;
         [logoView addSubview:sloganEn];
         
-        UILabel *sloganCn = [[UILabel alloc] initWithFrame:CGRectMake(160, 52, 150, 20)];
+        UILabel *sloganCn = [[UILabel alloc] initWithFrame:CGRectMake(160, 40, 150, 20)];
         sloganCn.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0];
         sloganCn.text = @"慢生活, 快健身!";
         sloganCn.textColor = [UIColor whiteColor];
@@ -107,30 +111,30 @@
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         dateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
 
-        UILabel *calendarDay = [[UILabel alloc] initWithFrame:CGRectMake(120, 10, 180, 140)];
-        calendarDay.font = [UIFont fontWithName:@"AvenirNextCondensed-UltraLight" size:140];
+        UILabel *calendarDay = [[UILabel alloc] initWithFrame:CGRectMake(120, -5, 180, 140)];
+        calendarDay.font = [UIFont fontWithName:@"DINPro-Light" size:140];
         calendarDay.textColor = [UIColor whiteColor];
         calendarDay.text = [NSString stringWithFormat:@"%ld", (long)[dateCompoments day]];
         calendarDay.textAlignment = NSTextAlignmentRight;
         [calendarView addSubview:calendarDay];
         
-        UILabel *calendarMonth = [[UILabel alloc] initWithFrame:CGRectMake(20, 20, 120, 30)];
-        calendarMonth.font = [UIFont fontWithName:@"AvenirNextCondensed-Regular" size:20];
+        UILabel *calendarMonth = [[UILabel alloc] initWithFrame:CGRectMake(20, 10, 120, 50)];
+        calendarMonth.font = [UIFont fontWithName:@"DINPro-Light" size:40];
         calendarMonth.textColor = [UIColor whiteColor];
         calendarMonth.textAlignment = NSTextAlignmentLeft;
-        dateFormatter.dateFormat = @"MMMM";
-        calendarMonth.text = [[dateFormatter stringFromDate:today] capitalizedString];
+        dateFormatter.dateFormat = @"MMM";
+        calendarMonth.text = [[dateFormatter stringFromDate:today] uppercaseString];
         [calendarView addSubview:calendarMonth];
         
-        UILabel *calendarYear = [[UILabel alloc] initWithFrame:CGRectMake(20, 50, 120, 30)];
-        calendarYear.font = [UIFont fontWithName:@"AvenirNextCondensed-Regular" size:20];
+        UILabel *calendarYear = [[UILabel alloc] initWithFrame:CGRectMake(20, 45, 120, 50)];
+        calendarYear.font = [UIFont fontWithName:@"DINPro-Light" size:40];
         calendarYear.textColor = [UIColor whiteColor];
         calendarYear.text = [NSString stringWithFormat:@"%ld", (long)[dateCompoments year]];
         calendarYear.textAlignment = NSTextAlignmentLeft;
         [calendarView addSubview:calendarYear];
 
         UILabel *calendarWeekday = [[UILabel alloc] initWithFrame:CGRectMake(20, 80, 120, 30)];
-        calendarWeekday.font = [UIFont fontWithName:@"AvenirNextCondensed-Regular" size:20];
+        calendarWeekday.font = [UIFont fontWithName:@"DINPro-Light" size:14];
         calendarWeekday.textColor = [UIColor whiteColor];
         calendarWeekday.textAlignment = NSTextAlignmentLeft;
         dateFormatter.dateFormat=@"EEEE";
@@ -148,6 +152,7 @@
         
         username = [[UITextField alloc] initWithFrame:CGRectMake(15, 15, 200, 40)];
         username.font = [UIFont fontWithName:fontName size:16.0f];
+        username.placeholder = @"用户名";
         username.borderStyle = UITextBorderStyleRoundedRect;
         username.keyboardType = UIKeyboardTypeASCIICapable;
         username.delegate = self;
@@ -155,6 +160,7 @@
 
         password = [[UITextField alloc] initWithFrame:CGRectMake(15, 65, 200, 40)];
         password.font = [UIFont fontWithName:fontName size:16.0f];
+        password.placeholder = @"密码";
         password.borderStyle = UITextBorderStyleRoundedRect;
         password.keyboardType = UIKeyboardTypeASCIICapable;
         password.delegate = self;
@@ -165,7 +171,7 @@
         [doLogin setBackgroundColor:[UIColor colorWithRed:37/255. green:217/255. blue:235/255. alpha:1]];
         [doLogin setTitle:@"登录" forState:UIControlStateNormal];
         doLogin.titleLabel.font = [UIFont systemFontOfSize:22];
-        doLogin.titleLabel.textColor = [UIColor whiteColor];
+        [doLogin setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [doLogin addTarget:self action:@selector(loginEvent:) forControlEvents:UIControlEventTouchUpInside];
         [fieldsView addSubview:doLogin];
     }

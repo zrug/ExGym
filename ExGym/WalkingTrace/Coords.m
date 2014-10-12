@@ -10,6 +10,7 @@
 #import "Coords.h"
 #import "Coord.h"
 #import "DataFile.h"
+#import "ExGymDB.h"
 
 @interface Coords()
 - (double)distance:(Coord *)p1 to:(Coord *)p2;
@@ -30,6 +31,7 @@
         self.contents = [[NSMutableArray alloc] init];
         self.cache_strings = [[NSMutableArray alloc] init];
         self.distanceM = 0.;
+        self.totalSecond = 0.;
     }
     return self;
 }
@@ -67,6 +69,48 @@
     DataFile *file = [[DataFile alloc] initData];
     
     return [file appendAndSaveCoords:self];
+}
+
+- (id)initWithUUID:(NSUUID *)uuid {
+    self = [self init];
+    if (self) {
+        self.contents = [[NSMutableArray alloc] init];
+        self.distanceM = 0;
+        ExGymDB *db = [ExGymDB instanceOfExGymDB];
+        [db open];
+
+        FMResultSet *rs = [db executeQuery:@"select * from coord where workoutid=? order by time", [uuid UUIDString]];
+        while([rs next]) {
+            CLLocationDegrees lati = [rs doubleForColumn:@"latitude"];
+            CLLocationDegrees longi = [rs doubleForColumn:@"longitude"];
+            NSDate *time = [rs dateForColumn:@"time"];
+            Coord *coord = [[Coord alloc] initWithLat:lati andLng:longi andTime:time];
+            [self addCoord:coord];
+        }
+        
+        [db close];
+        
+    }
+    return self;
+}
+
+- (BOOL)saveWithUUID:(NSUUID *)uuid {
+    ExGymDB *db = [ExGymDB instanceOfExGymDB];
+    [db open];
+
+    for (Coord *coord in _contents) {
+        NSLog(@"insert ing coord at time: %@", [coord time]);
+        [db executeUpdate:@"insert into coord (workoutid, latitude, longitude, altitude, speed, time) values(?, ?, ?, ?, ?, ?)",
+         [uuid UUIDString],
+         [NSNumber numberWithDouble:coord.coordinate.latitude].stringValue,
+         [NSNumber numberWithDouble:coord.coordinate.longitude].stringValue,
+         [NSNumber numberWithDouble:0].stringValue,
+         [NSNumber numberWithDouble:0].stringValue,
+         [coord time]];
+    }
+
+    [db close];
+    return YES;
 }
 
 - (MAPolyline *)polylineFrom:(Coord *)begin to:(Coord *)end {
@@ -124,17 +168,27 @@
     return lays;
 }
 
+- (double)speed {
+    NSLog(@"speed self.distanceM: %0.2f, self.totalSecond: %0.2f", self.distanceM, self.totalSecond);
+    if (self.distanceM <= 0 || self.totalSecond <= 0) return 0;
+    return (self.distanceM / self.totalSecond * 3600) / 1000;
+}
+
 - (void)addCoord:(Coord *)coord {
 
-    if ([self.contents count] > 1) {
+    if ([self.contents count] >= 1) {
         Coord *lastLoc = [self.contents objectAtIndex:(self.contents.count-1)];
         double oneDis = [self distance:lastLoc to:coord];
+NSLog(@"addCoord oneDis: %0.2f", oneDis);
         self.distanceM += oneDis;
         coord.distanceFromPrev = oneDis;
         
-        NSTimeInterval timeFromPrev = [[lastLoc time] timeIntervalSinceDate:[coord time]];
+        NSTimeInterval timeFromPrev = [[coord time] timeIntervalSinceDate:[lastLoc time]];
+        self.totalSecond += timeFromPrev;
         [coord setSpeedFromPrev:[self speedFromDistanceM:oneDis andTimeInterval:timeFromPrev]];
     } else {
+        self.distanceM = 0;
+        self.totalSecond = 0;
         [coord setSpeedFromPrev:0];
     }
     

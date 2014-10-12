@@ -18,11 +18,15 @@
 @property (nonatomic, strong) MAMapView *mapView;
 @property (nonatomic, strong) CBCentralManager *manager;
 @property (nonatomic, strong) CBPeripheral *myPeripheral;
+@property (nonatomic, retain) NSUUID *uuid;
 
 -(void)newWalkingTrace;
 -(void)walkingReview:(Coords *)coords;
 
 -(void)load:(Coords *)coords;
+
+-(void)loadByUUID:(NSUUID *)uuid;
+
 - (void)prepareTrace;
 -(void)startTrace;
 
